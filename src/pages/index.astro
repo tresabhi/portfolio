@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Engine } from "./_index";
 ---
 
 <style></style>
@@ -8,4 +9,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
   Aliquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
   Quisquam, quae. Aliquam, quae.
+
+  <Engine client:load />
 </BaseLayout>
