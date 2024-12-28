@@ -1,57 +1,23 @@
-import { Environment, OrbitControls } from "@react-three/drei";
-import { Canvas, useLoader } from "@react-three/fiber";
-import { LineBasicMaterial, MeshStandardMaterial, Plane, Vector3 } from "three";
-import { GLTFLoader } from "three/examples/jsm/Addons.js";
-import { jsxTree } from "../core/jsxTree";
-
-const outlineMaterial = new LineBasicMaterial({
-  color: "red",
-});
-
-function EngineModel() {
-  const model = useLoader(GLTFLoader, "/engine.glb");
-  const nodes = Object.values(model.nodes);
-
-  return (
-    <group>
-      {nodes.map((node) => {
-        return jsxTree(node, {
-          mesh: {
-            material: new MeshStandardMaterial({
-              color: "red",
-              wireframe: true,
-              clippingPlanes: [new Plane(new Vector3(0, 0, -1), 0)],
-            }),
-          },
-        });
-      })}
-      {nodes.map((node) => {
-        return jsxTree(node, {
-          mesh: {
-            material: new MeshStandardMaterial({
-              color: "red",
-              clippingPlanes: [new Plane(new Vector3(0, 0, 1), 0)],
-            }),
-          },
-        });
-      })}
-    </group>
-  );
-}
+import { Environment } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { EngineModel } from "../components/Engine";
 
 export function Engine() {
   return (
     <Canvas
       style={{
-        height: "20rem",
+        height: "50rem",
       }}
       gl={{
         clippingPlanes: [],
         localClippingEnabled: true,
       }}
+      camera={{
+        position: [15, 6, -15],
+        fov: 20,
+      }}
     >
-      <OrbitControls />
-      <Environment preset="lobby" />
+      <Environment preset="warehouse" />
       <EngineModel />
     </Canvas>
   );
