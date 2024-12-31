@@ -4,7 +4,7 @@ import { EducationCard } from "./EducationCard";
 export function Page2() {
   return (
     <Flex direction="column" gap="4">
-      <Heading size="8">Education</Heading>
+      <Heading size="7">Education</Heading>
 
       <Flex wrap="wrap" gap="3" width="100%">
         <EducationCard

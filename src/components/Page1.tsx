@@ -1,4 +1,5 @@
 import { Code, Flex, Text } from "@radix-ui/themes";
+import { Engine } from "./Engine";
 import { IntroArrow } from "./IntroArrow";
 
 export function Page1() {
@@ -7,8 +8,12 @@ export function Page1() {
       <Flex direction="column" align="start" gap="4">
         <Flex align="end" gap="6">
           <img
-            src="https://i.imgur.com/Il3PQon.png"
-            style={{ width: "10rem", height: "10rem" }}
+            src="https://i.imgur.com/2aKUhJV.png"
+            style={{
+              width: "10rem",
+              height: "10rem",
+              filter: "drop-shadow(1px 1px 2px var(--gray-a10))",
+            }}
           />
           <IntroArrow style={{ height: "7rem", width: "12rem" }} />
         </Flex>
@@ -19,7 +24,7 @@ export function Page1() {
         </Text>
       </Flex>
 
-      {/* <EngineModel /> */}
+      <Engine />
     </Flex>
   );
 }
