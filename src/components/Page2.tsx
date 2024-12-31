@@ -17,12 +17,11 @@ export function Page2() {
         />
 
         <EducationCard
-          name="Cyber Physical Systems"
+          name="Cyber-Physical Systems"
           type="Bachelor, Minor"
           location="Iowa State University"
-          time="2024-present"
+          time="2025-present"
           image="https://i.imgur.com/iHpzvUm.png"
-          grade="GPA 4.00"
         />
       </Flex>
     </Flex>

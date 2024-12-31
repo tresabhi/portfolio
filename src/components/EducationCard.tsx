@@ -7,7 +7,7 @@ interface EducationCardProps {
   location: string;
   time: string;
   image: string;
-  grade: string;
+  grade?: string;
 }
 
 export function EducationCard({
@@ -48,12 +48,14 @@ export function EducationCard({
           </Flex>
 
           <Flex gap="2">
-            <Text>
-              <Flex align="center" gap="1">
-                <FileTextIcon />
-                {grade}
-              </Flex>
-            </Text>
+            {grade && (
+              <Text>
+                <Flex align="center" gap="1">
+                  <FileTextIcon />
+                  {grade}
+                </Flex>
+              </Text>
+            )}
 
             {/* <Text>
               <Flex align="center" gap="0">

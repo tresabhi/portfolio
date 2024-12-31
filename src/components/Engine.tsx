@@ -1,3 +1,4 @@
+import { Box } from "@radix-ui/themes";
 import { Environment } from "@react-three/drei";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
@@ -10,17 +11,27 @@ export function Engine() {
   const onScreen = useOnScreen(canvas);
 
   return (
-    <Canvas
-      ref={canvas}
-      frameloop={onScreen ? "always" : "never"}
-      camera={{
-        fov: 25,
-        position: [10, 2, -10],
-      }}
+    <Box
+      position="relative"
+      maxWidth="40rem"
+      flexGrow="1"
+      minWidth="30rem"
+      height="20rem"
     >
-      <Lighting />
-      <Model />
-    </Canvas>
+      <Box position="absolute" top="0" left="0" width="100%" height="100%">
+        <Canvas
+          ref={canvas}
+          frameloop={onScreen ? "always" : "never"}
+          camera={{
+            fov: 25,
+            position: [10, 2, -10],
+          }}
+        >
+          <Lighting />
+          <Model />
+        </Canvas>
+      </Box>
+    </Box>
   );
 }
 

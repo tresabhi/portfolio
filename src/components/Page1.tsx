@@ -4,7 +4,7 @@ import { IntroArrow } from "./IntroArrow";
 
 export function Page1() {
   return (
-    <Flex>
+    <Flex justify="between" wrap="wrap" align="center">
       <Flex direction="column" align="start" gap="4">
         <Flex align="end" gap="6">
           <img
