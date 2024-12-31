@@ -10,12 +10,12 @@ export function SectionIntro() {
           <img
             src="https://i.imgur.com/2aKUhJV.png"
             style={{
-              width: "10rem",
-              height: "10rem",
+              width: "12rem",
+              height: "12rem",
               filter: "drop-shadow(1px 1px 2px var(--gray-a10))",
             }}
           />
-          <IntroArrow style={{ height: "7rem", width: "12rem" }} />
+          <IntroArrow style={{ height: "7rem", width: "10rem" }} />
         </Flex>
 
         <Text size="7" style={{ width: "31rem" }}>
