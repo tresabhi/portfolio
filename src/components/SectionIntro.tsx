@@ -2,7 +2,7 @@ import { Code, Flex, Text } from "@radix-ui/themes";
 import { Engine } from "./Engine";
 import { IntroArrow } from "./IntroArrow";
 
-export function Page1() {
+export function SectionIntro() {
   return (
     <Flex justify="between" wrap="wrap" align="center">
       <Flex direction="column" align="start" gap="4">

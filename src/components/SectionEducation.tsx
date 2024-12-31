@@ -3,7 +3,7 @@ import { EducationCard } from "./EducationCard";
 
 const BIRTH = new Date(2005, 3, 7);
 
-export function Page2() {
+export function SectionEducation() {
   const timeElapsed = Date.now() - BIRTH.getTime();
   const age = Math.floor(timeElapsed / (1000 * 60 * 60 * 24 * 365));
 
@@ -49,16 +49,13 @@ export function Page2() {
           color="gray"
           highContrast
           size="4"
-          style={{ maxWidth: "50rem" }}
+          style={{ maxWidth: "40rem" }}
         >
-          The STS-135 may have marked the <i>end</i> of the Space Shuttle era,
-          but it <i>ignited</i> my lifelong fascination with flying machines. At
-          just seven years old, I could not even remotely grasp the mission's
-          magnitude and scale. Even now, as a {age}-year-old, its enormity and
-          complexity still astounds me! Over the years, I've developed an
-          enduring passion for rockets and airplanes. Coupled with a growing
-          interest in computers, choosing Aerospace Engineering with a
-          Cyber-Physical Systems minor was an obvious path forward.
+          STS-135 sparked my fascination with flying machines at seven years
+          old. Today, at {age}, I'm still amazed by its complexity. This
+          enduring passion for rockets and airplanes, paired with an interest in
+          computers, led me to pursue Aerospace Engineering with a
+          Cyber-Physical Systems minor.
         </Blockquote>
       </Flex>
     </>

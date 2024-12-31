@@ -1,7 +1,8 @@
 import { Flex, Separator } from "@radix-ui/themes";
 import { BaseTheme } from "../components/BaseTheme";
-import { Page1 } from "../components/Page1";
-import { Page2 } from "../components/Page2";
+import { SectionIntro } from "../components/SectionIntro";
+import { SectionEducation } from "../components/SectionEducation";
+import { SectionProjects } from "../components/SectionProjects";
 
 export function Page() {
   return (
@@ -20,9 +21,11 @@ export function Page() {
           maxWidth="80rem"
           style={{ background: "var(--gray-1)", boxShadow: "var(--shadow-3)" }}
         >
-          <Page1 />
+          <SectionIntro />
           <Separator size="4" />
-          <Page2 />
+          <SectionEducation />
+          <Separator size="4" />
+          <SectionProjects />
         </Flex>
       </Flex>
     </BaseTheme>
