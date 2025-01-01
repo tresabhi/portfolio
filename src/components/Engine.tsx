@@ -13,9 +13,9 @@ export function Engine() {
   return (
     <Box
       position="relative"
-      maxWidth="40rem"
       flexGrow="1"
-      minWidth="30rem"
+      maxWidth="30rem"
+      minWidth="22rem"
       height="20rem"
     >
       <Box position="absolute" top="0" left="0" width="100%" height="100%">

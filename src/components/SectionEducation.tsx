@@ -1,4 +1,4 @@
-import { Blockquote, Box, Flex, Heading } from "@radix-ui/themes";
+import { Blockquote, Box, Flex, Heading, Separator } from "@radix-ui/themes";
 import { EducationCard } from "./EducationCard";
 
 const BIRTH = new Date(2005, 3, 7);
@@ -9,6 +9,8 @@ export function SectionEducation() {
 
   return (
     <>
+      <Separator size="4" id="education" />
+
       <Flex direction="column" gap="4">
         <Heading size="7">Education</Heading>
 
