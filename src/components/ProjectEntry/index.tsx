@@ -8,15 +8,17 @@ import {
   Link,
   Text,
 } from "@radix-ui/themes";
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import "./index.css";
 
 interface ProjectEntryProps {
   title: string;
-  image: string;
+  image: string | string[];
   children: ReactNode;
   time: string;
   truncate?: boolean;
   video?: string;
+  alternative?: boolean;
 }
 
 export function ProjectEntry({
@@ -26,21 +28,40 @@ export function ProjectEntry({
   time,
   video,
   truncate,
+  alternative,
 }: ProjectEntryProps) {
   const [expanded, setExpanded] = useState(!truncate);
+  const [index, setIndex] = useState(0);
+  const images = Array.isArray(image) ? image : [image];
+  const progress = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((index) => (index + 1) % images.length);
+
+      const indexAfterThis = (index + 2) % images.length;
+      const image = images[indexAfterThis];
+      const img = new Image();
+
+      img.src = image;
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <Flex gap="6">
+    <Flex gap="6" direction={alternative ? "row-reverse" : "row"}>
       <Link href={video} target="_blank">
         <Box
           width="15rem"
           height="15rem"
           flexShrink="0"
           style={{
-            backgroundImage: `url(${image})`,
+            backgroundImage: `url(${images[index]})`,
             boxShadow: "var(--shadow-5)",
             borderRadius: "var(--radius-4)",
             backgroundSize: "cover",
+            overflow: "hidden",
           }}
           position="relative"
         >
@@ -60,9 +81,30 @@ export function ProjectEntry({
               <PlayIcon width="1em" height="1em" />
             </IconButton>
           )}
+
+          {Array.isArray(image) && (
+            <Flex
+              justify="end"
+              width="100%"
+              bottom="0"
+              key={index}
+              position="absolute"
+              style={{
+                backgroundColor: "var(--gray-11)",
+              }}
+            >
+              <Box
+                height="0.25rem"
+                ref={progress}
+                className="project-image-progress"
+                style={{
+                  backgroundColor: "var(--gray-1)",
+                }}
+              />
+            </Flex>
+          )}
         </Box>
       </Link>
-
       <Flex
         flexGrow="1"
         direction="column"
@@ -74,7 +116,11 @@ export function ProjectEntry({
         position="relative"
         gap="3"
       >
-        <Flex align="center" gap="3">
+        <Flex
+          align="center"
+          gap="4"
+          direction={alternative ? "row-reverse" : "row"}
+        >
           <Heading weight="medium" size="6">
             {title}
           </Heading>
@@ -107,6 +153,7 @@ export function ProjectEntry({
           </Flex>
         )}
       </Flex>
+      1
     </Flex>
   );
 }
