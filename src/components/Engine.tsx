@@ -1,7 +1,7 @@
 import { Box } from "@radix-ui/themes";
 import { Environment } from "@react-three/drei";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
+import { Suspense, useMemo, useRef } from "react";
 import { Mesh, type Group } from "three";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import { useOnScreen } from "../hooks/useOnScreen";
@@ -27,8 +27,10 @@ export function Engine() {
             position: [10, 2, -10],
           }}
         >
-          <Lighting />
-          <Model />
+          <Suspense fallback={null}>
+            <Lighting />
+            <Model />
+          </Suspense>
         </Canvas>
       </Box>
     </Box>

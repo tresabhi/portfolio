@@ -21,7 +21,7 @@ export function EducationCard({
   return (
     <Card variant="classic" style={{ flexGrow: 1, flexShrink: 0 }}>
       <Flex align="center" gap="6" px="2">
-        <img src={image} style={{ height: "7rem", width: "7rem" }} />
+        <img alt={name} src={image} style={{ height: "7rem", width: "7rem" }} />
 
         <Flex direction="column" gap="1">
           <Flex align="center" gap="2">

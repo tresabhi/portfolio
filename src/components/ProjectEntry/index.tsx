@@ -1,13 +1,5 @@
-import { CaretDownIcon, PlayIcon } from "@radix-ui/react-icons";
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  IconButton,
-  Link,
-  Text,
-} from "@radix-ui/themes";
+import { PlayIcon } from "@radix-ui/react-icons";
+import { Box, Flex, Heading, IconButton, Link, Text } from "@radix-ui/themes";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import "./index.css";
 
@@ -16,9 +8,7 @@ interface ProjectEntryProps {
   image: string | string[];
   children: ReactNode;
   time: string;
-  truncate?: boolean;
   video?: string;
-  alternative?: boolean;
 }
 
 export function ProjectEntry({
@@ -27,10 +17,7 @@ export function ProjectEntry({
   children,
   time,
   video,
-  truncate,
-  alternative,
 }: ProjectEntryProps) {
-  const [expanded, setExpanded] = useState(!truncate);
   const [index, setIndex] = useState(0);
   const images = Array.isArray(image) ? image : [image];
   const progress = useRef<HTMLDivElement>(null);
@@ -50,7 +37,7 @@ export function ProjectEntry({
   }, []);
 
   return (
-    <Flex gap="6" direction={alternative ? "row-reverse" : "row"}>
+    <Flex gap="6">
       <Link href={video} target="_blank">
         <Box
           width="15rem"
@@ -108,7 +95,6 @@ export function ProjectEntry({
       <Flex
         flexGrow="1"
         direction="column"
-        maxHeight={expanded ? "50rem" : "15rem"}
         style={{
           transition: "max-height 0.3s ease-in-out",
         }}
@@ -116,11 +102,7 @@ export function ProjectEntry({
         position="relative"
         gap="3"
       >
-        <Flex
-          align="center"
-          gap="4"
-          direction={alternative ? "row-reverse" : "row"}
-        >
+        <Flex align="center" gap="4">
           <Heading weight="medium" size="6">
             {title}
           </Heading>
@@ -132,28 +114,7 @@ export function ProjectEntry({
             {children}
           </Flex>
         </Text>
-
-        {!expanded && (
-          <Flex
-            position="absolute"
-            bottom="0"
-            width="100%"
-            left="0"
-            justify="center"
-            pt="9"
-            onClick={() => setExpanded(true)}
-            style={{
-              background:
-                "linear-gradient(transparent, var(--mauve-1), var(--mauve-1))",
-            }}
-          >
-            <Button variant="ghost" size="3" mb="2">
-              More <CaretDownIcon />
-            </Button>
-          </Flex>
-        )}
       </Flex>
-      1
     </Flex>
   );
 }

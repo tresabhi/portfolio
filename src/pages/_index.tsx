@@ -1,4 +1,4 @@
-import { Flex, Separator } from "@radix-ui/themes";
+import { Flex } from "@radix-ui/themes";
 import { BaseTheme } from "../components/BaseTheme";
 import { SectionEducation } from "../components/SectionEducation";
 import { SectionIntro } from "../components/SectionIntro";
