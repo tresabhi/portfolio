@@ -1,6 +1,6 @@
-import { PlayIcon } from "@radix-ui/react-icons";
+import { DotFilledIcon, DotIcon, PlayIcon } from "@radix-ui/react-icons";
 import { Box, Flex, Heading, IconButton, Link, Text } from "@radix-ui/themes";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import "./index.css";
 
 interface ProjectEntryProps {
@@ -9,6 +9,7 @@ interface ProjectEntryProps {
   children: ReactNode;
   time: string;
   video?: string;
+  shotDescription: string;
 }
 
 export function ProjectEntry({
@@ -17,13 +18,15 @@ export function ProjectEntry({
   children,
   time,
   video,
+  shotDescription,
 }: ProjectEntryProps) {
   const [index, setIndex] = useState(0);
   const images = Array.isArray(image) ? image : [image];
-  const progress = useRef<HTMLDivElement>(null);
+  const [expanded, setExpanded] = useState(false);
+  const hasMultipleImages = images.length > 1;
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timeout = setTimeout(() => {
       setIndex((index) => (index + 1) % images.length);
 
       const indexAfterThis = (index + 2) % images.length;
@@ -33,87 +36,110 @@ export function ProjectEntry({
       img.src = image;
     }, 10000);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearTimeout(timeout);
+  }, [index]);
 
   return (
-    <Flex gap="6">
-      <Link href={video} target="_blank">
-        <Box
-          width="15rem"
-          height="15rem"
-          flexShrink="0"
-          style={{
-            backgroundImage: `url(${images[index]})`,
-            boxShadow: "var(--shadow-5)",
-            borderRadius: "var(--radius-4)",
-            backgroundSize: "cover",
-            overflow: "hidden",
-          }}
-          position="relative"
-        >
-          {video && (
-            <IconButton
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                cursor: "inherit",
-              }}
-              size="4"
-              color="gray"
-              variant="surface"
-            >
-              <PlayIcon width="1em" height="1em" />
-            </IconButton>
-          )}
-
-          {Array.isArray(image) && (
-            <Flex
-              justify="end"
-              width="100%"
-              bottom="0"
-              key={index}
-              position="absolute"
-              style={{
-                backgroundColor: "var(--gray-11)",
-              }}
-            >
-              <Box
-                height="0.25rem"
-                ref={progress}
-                className="project-image-progress"
+    <Flex
+      style={{
+        borderRadius: "var(--radius-4)",
+        overflow: "hidden",
+        backgroundColor: "var(--gray-3)",
+        boxShadow: "var(--shadow-6)",
+      }}
+      direction="column"
+    >
+      <Box>
+        <Link href={video} target="_blank">
+          <Box
+            height="22rem"
+            style={{
+              backgroundImage: `url(${images[index]})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              overflow: "hidden",
+            }}
+            position="relative"
+          >
+            {video && (
+              <IconButton
                 style={{
-                  backgroundColor: "var(--gray-1)",
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  cursor: "inherit",
                 }}
-              />
-            </Flex>
-          )}
-        </Box>
-      </Link>
+                size="4"
+                color="gray"
+                variant="surface"
+              >
+                <PlayIcon width="1em" height="1em" />
+              </IconButton>
+            )}
+          </Box>
+        </Link>
+      </Box>
+
+      {hasMultipleImages && (
+        <Flex justify="center" align="center" pt="2" my="2">
+          {images.map((_, thisIndex) => {
+            let Icon = DotIcon;
+
+            if (thisIndex === index) {
+              Icon = DotFilledIcon;
+            }
+
+            return (
+              <Box
+                style={{ cursor: "pointer" }}
+                width="2rem"
+                height="2rem"
+                onClick={() => setIndex(thisIndex)}
+              >
+                <Icon width="100%" height="100%" />
+              </Box>
+            );
+          })}
+        </Flex>
+      )}
+
       <Flex
-        flexGrow="1"
         direction="column"
         style={{
           transition: "max-height 0.3s ease-in-out",
         }}
         overflow="hidden"
         position="relative"
-        gap="3"
+        justify="center"
+        gap="2"
+        p="6"
+        pt={hasMultipleImages ? "0" : undefined}
       >
         <Flex align="center" gap="4">
           <Heading weight="medium" size="6">
             {title}
           </Heading>
-          <Text size="2">{time}</Text>
+          <Text trim="end">{time}</Text>
         </Flex>
 
-        <Text size="4">
-          <Flex direction="column" gap="2">
-            {children}
-          </Flex>
-        </Text>
+        {!expanded && (
+          <Text style={{ maxWidth: "100%" }} wrap="wrap">
+            {shotDescription}{" "}
+            <Link
+              underline="always"
+              href="#"
+              onClick={(event) => {
+                event.preventDefault();
+                setExpanded(true);
+              }}
+            >
+              More...
+            </Link>
+          </Text>
+        )}
+
+        {expanded && children}
       </Flex>
     </Flex>
   );
