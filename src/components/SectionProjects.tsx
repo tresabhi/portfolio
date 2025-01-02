@@ -10,7 +10,7 @@ export function SectionProjects() {
         <Flex gap="8">
           <Flex direction="column" gap="8" flexGrow="1" flexBasis="0">
             <Flex direction="column" gap="3">
-              <Heading size="9">Projects</Heading>
+              <Heading size="8">Projects</Heading>
               <Text size="4" color="gray">
                 From aerospace and robotics to tooling and hobbies.
               </Text>

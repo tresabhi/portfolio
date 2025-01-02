@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export function IntroArrow(props: SVGProps<SVGSVGElement>) {
+export function IntroArrowDoodle(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="353"

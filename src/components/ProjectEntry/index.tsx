@@ -45,7 +45,7 @@ export function ProjectEntry({
         borderRadius: "var(--radius-4)",
         overflow: "hidden",
         backgroundColor: "var(--gray-3)",
-        boxShadow: "var(--shadow-6)",
+        boxShadow: "var(--shadow-2)",
       }}
       direction="column"
     >

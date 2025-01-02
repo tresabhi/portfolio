@@ -1,7 +1,7 @@
 import { EnvelopeClosedIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Code, Flex, Link, Separator, Text } from "@radix-ui/themes";
 import { Engine } from "./Engine";
-import { IntroArrow } from "./IntroArrow";
+import { IntroArrowDoodle } from "./IntroArrowDoodle";
 
 export function SectionIntro() {
   return (
@@ -18,7 +18,10 @@ export function SectionIntro() {
                 filter: "drop-shadow(1px 1px 2px var(--gray-a10))",
               }}
             />
-            <IntroArrow style={{ height: "7rem", width: "10rem" }} />
+
+            <Text color="blue" highContrast>
+              <IntroArrowDoodle style={{ height: "7rem", width: "10rem" }} />
+            </Text>
           </Flex>
 
           <Text size="7" style={{ width: "31rem" }}>
