@@ -1,6 +1,9 @@
 import { Flex, Heading, Separator } from "@radix-ui/themes";
-import { times } from "lodash-es";
 import { TimelineProject } from "./TimelineProject";
+import { TimelineProjectType } from "./TimelineProject/constants";
+
+const lorem =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
 export function SectionProjects() {
   return (
@@ -12,23 +15,46 @@ export function SectionProjects() {
       </Heading>
 
       <Flex direction="column">
-        {times(25, (index) => (
-          <TimelineProject
-            title={`Test ${index}`}
-            first={index === 0}
-            last={index === 24}
-            alternate={index % 2 === 1}
-            time="2023 - present"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </TimelineProject>
-        ))}
+        <TimelineProject
+          title="Cloud Surfers"
+          type={TimelineProjectType.Educational}
+          time="2024"
+          first
+        >
+          {lorem}
+        </TimelineProject>
+
+        <TimelineProject
+          title="J.E.T."
+          type={TimelineProjectType.Club}
+          time="2024 - present"
+        >
+          {lorem}
+        </TimelineProject>
+
+        <TimelineProject
+          title="Avionics in Rocketry Club"
+          type={TimelineProjectType.Club}
+          time="2023"
+        >
+          {lorem}
+        </TimelineProject>
+
+        <TimelineProject
+          title="BlitzKit"
+          type={TimelineProjectType.Hobby}
+          time="2022 - present"
+        >
+          {lorem}
+        </TimelineProject>
+
+        <TimelineProject
+          title="Stellar"
+          type={TimelineProjectType.Hobby}
+          time="2021 - present"
+        >
+          {lorem}
+        </TimelineProject>
       </Flex>
     </>
   );
