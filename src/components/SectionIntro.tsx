@@ -1,5 +1,6 @@
 import { EnvelopeClosedIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Code, Flex, Link, Separator, Text } from "@radix-ui/themes";
+import { imgur } from "../core/imgur";
 import { Engine } from "./Engine";
 import { IntroArrowDoodle } from "./IntroArrowDoodle";
 
@@ -11,7 +12,7 @@ export function SectionIntro() {
           <Flex align="end" gap="6">
             <img
               alt="Abhi"
-              src="https://i.imgur.com/2aKUhJV.png"
+              src={imgur("2aKUhJV", { format: "jpeg" })}
               style={{
                 width: "12rem",
                 height: "12rem",

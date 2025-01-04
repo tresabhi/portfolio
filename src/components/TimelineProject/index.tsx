@@ -1,10 +1,11 @@
 import { DotIcon } from "@radix-ui/react-icons";
 import { Badge, Box, Flex, Heading, Text } from "@radix-ui/themes";
+import type { ReactNode } from "react";
 import { TimelineProjectType } from "./constants";
 
 interface TimelineProjectProps {
   title: string;
-  children: string;
+  children: ReactNode;
   first?: boolean;
   last?: boolean;
   time?: string;
@@ -69,7 +70,7 @@ export function TimelineProject({
           )}
         </Flex>
 
-        <Text>{children}</Text>
+        {typeof children === "string" ? <Text>{children}</Text> : children}
       </Flex>
     </Flex>
   );

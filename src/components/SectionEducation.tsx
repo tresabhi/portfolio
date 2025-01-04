@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Separator, Text } from "@radix-ui/themes";
 import { GPA } from "../core/constants";
+import { imgur, ImgurSize } from "../core/imgur";
 import { RocketDoodle } from "./RocketDoodle";
 import { TowerDoodle } from "./TowerDoodle";
 
@@ -71,7 +72,10 @@ export function SectionEducation() {
             height="10rem"
             flexShrink="0"
             style={{
-              backgroundImage: "url(https://i.imgur.com/4DvrZho.png)",
+              backgroundImage: `url(${imgur("4DvrZho", {
+                format: "jpeg",
+                size: ImgurSize.MediumThumbnail,
+              })})`,
               backgroundSize: "cover",
               borderRadius: "var(--radius-4)",
               boxShadow: "var(--shadow-5)",
@@ -79,9 +83,7 @@ export function SectionEducation() {
           />
 
           <Flex direction="column" gap="2">
-            <Heading size="5" color="blue" highContrast>
-              Why Aerospace?
-            </Heading>
+            <Heading size="5">Why Aerospace?</Heading>
 
             <Text
               color="gray"
@@ -105,7 +107,10 @@ export function SectionEducation() {
             height="10rem"
             flexShrink="0"
             style={{
-              backgroundImage: "url(https://i.imgur.com/TDN9Exk.png)",
+              backgroundImage: `url(${imgur("TDN9Exk", {
+                format: "jpeg",
+                size: ImgurSize.MediumThumbnail,
+              })})`,
               backgroundSize: "cover",
               borderRadius: "var(--radius-4)",
               boxShadow: "var(--shadow-5)",
@@ -113,9 +118,7 @@ export function SectionEducation() {
           />
 
           <Flex direction="column" gap="2">
-            <Heading size="5" color="orange" highContrast>
-              Why C-P Systems?
-            </Heading>
+            <Heading size="5">Why C-P Systems?</Heading>
 
             <Text
               color="gray"

@@ -1,4 +1,4 @@
-import { Flex, Heading, Separator } from "@radix-ui/themes";
+import { Flex, Heading, Separator, Text } from "@radix-ui/themes";
 import { ASPDoodle1, ASPDoodle2, ASPDoodle3, ASPDoodle4 } from "./ASPDoodle";
 import { TimelineProject } from "./TimelineProject";
 import { TimelineProjectType } from "./TimelineProject/constants";
@@ -68,9 +68,10 @@ export function SectionProjects() {
         <TimelineProject
           title="Stellar"
           type={TimelineProjectType.Hobby}
-          time="2021 - present"
+          time="2021 - 2024"
         >
-          {lorem}
+          My first proper endeavour into cyber-physical systems was the creation
+          of my own CAD software.
         </TimelineProject>
 
         <TimelineProject
@@ -79,10 +80,17 @@ export function SectionProjects() {
           time="2013 - 2017"
           last
         >
-          Abhi's Space Programs (or ASP for short), was my first endeavour into
-          propulsion with absolutely no formal knowledge of rocketry (or safety
-          for that matter.) Pretty much all launches underwent the following
-          sequence:
+          <Text>
+            Abhi's Space Programs (ASP for short) marked my first venture into
+            propulsion, armed with zero formal knowledge of rocketry—or safety,
+            for that matter.
+          </Text>
+          <Text>
+            With aluminum foil bodies and solid motor fuel from sparklers and
+            candle wax, these rockets were truly the pinnacle of childhood
+            engineering! For inexplicable reasons, however, nearly every launch
+            followed the same familiar sequence:
+          </Text>
         </TimelineProject>
       </Flex>
 
@@ -91,7 +99,6 @@ export function SectionProjects() {
           <ASPDoodle1 width="17rem" height="17rem" />
           <ASPDoodle2 width="17rem" height="17rem" />
         </Flex>
-
         <Flex gap="2" wrap="wrap" justify="center">
           <ASPDoodle3 width="17rem" height="17rem" />
           <ASPDoodle4 width="17rem" height="17rem" />
