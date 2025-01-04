@@ -13,21 +13,11 @@ export function SectionEducation() {
     <>
       <Separator size="4" id="education" />
 
-      <Flex direction="column" gap="4">
-        <Flex justify="center">
-          <Heading
-            size="8"
-            style={{
-              backgroundImage:
-                "linear-gradient(90deg, var(--blue-9), var(--plum-9), var(--orange-9))",
-              backgroundClip: "text",
-              color: "transparent",
-            }}
-          >
-            Education
-          </Heading>
-        </Flex>
+      <Heading size="8" align="center">
+        Education
+      </Heading>
 
+      <Flex direction="column" gap="4">
         <Flex justify="center">
           <Flex direction="column" flexGrow="1" maxWidth="50rem" gap="4">
             <Flex justify="between" width="100%" px="8">

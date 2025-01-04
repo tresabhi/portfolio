@@ -1,104 +1,34 @@
-import { Flex, Heading, Link, Separator, Text } from "@radix-ui/themes";
-import { ProjectEntry } from "./ProjectEntry";
+import { Flex, Heading, Separator } from "@radix-ui/themes";
+import { times } from "lodash-es";
+import { TimelineProject } from "./TimelineProject";
 
 export function SectionProjects() {
   return (
     <>
-      <Separator id="projects" size="4" />
+      <Separator size="4" id="projects" />
 
-      <Flex direction="column" gap="7">
-        <Flex gap="8">
-          <Flex direction="column" gap="8" flexGrow="1" flexBasis="0">
-            <Flex direction="column" gap="3">
-              <Heading size="8">Projects</Heading>
-              <Text size="4" color="gray">
-                From aerospace and robotics to tooling and hobbies.
-              </Text>
-            </Flex>
+      <Heading size="8" align="center">
+        Projects
+      </Heading>
 
-            <ProjectEntry
-              shotDescription="I design a brand new combustion chamber with the goal of maximizing stoechiometric efficiency at sea level and ease the process of manufacturing."
-              time="2024 - present"
-              title="J.E.T. (AMC)"
-              image={[
-                "https://i.imgur.com/dFofBwn.png",
-                "https://i.imgur.com/3Wo1TaL.png",
-              ]}
-            >
-              <Text>
-                I am responsible for creating the heart of our jet engine as the
-                lead designer for the combustion chamber of J.E.T. (Jet Engine
-                Team, a humorously unexacting name I coined under the Advanced
-                Manufacturing Club).
-              </Text>
-              <Text>
-                This project draws knowledge beyond my current coursework;
-                hence, I primarily rely on independent research. I am honing the
-                combustion chamber to achieve an optimal stoichiometric
-                combustion at a precise 37:2 ratio. My design focuses on ease of
-                manufacturing while maintaining maximum efficiency to lower
-                emissions.
-              </Text>
-            </ProjectEntry>
-          </Flex>
-
-          <Flex direction="column" gap="8" flexGrow="1" flexBasis="0">
-            <ProjectEntry
-              shotDescription="I created an autonomous robot with capabilities of navigation over undefined terrain for the FTC competition."
-              video="https://www.youtube.com/watch?v=mjuX8Oxbl0k"
-              title="Nerdy Birds"
-              image="https://i.imgur.com/5Wr1W1J.pngs"
-              time="2019 - 2023"
-            >
-              <Text>
-                As the team captain and programmer for the Nerdy Birds{" "}
-                <Link
-                  target="_blank"
-                  href="https://www.firstinspires.org/robotics/ftc"
-                >
-                  FTC team
-                </Link>
-                , I led us to a decisive first-place victory at districts in
-                2023—our best performance in the team's 10-year history—and a
-                strong finish at states.
-              </Text>
-              <Text>
-                With no prior guidance or existing solutions, I took the
-                initiative to research and implement advanced technologies for
-                our robot solo. I mastered{" "}
-                <Link
-                  target="_blank"
-                  href="https://en.wikipedia.org/wiki/Computer_visions"
-                >
-                  computer vision
-                </Link>
-                ,{" "}
-                <Link
-                  target="_blank"
-                  href="https://en.wikipedia.org/wiki/Pathfinding"
-                >
-                  pathfinding
-                </Link>
-                ,{" "}
-                <Link
-                  target="_blank"
-                  href="https://en.wikipedia.org/wiki/Inertial_navigation_system"
-                >
-                  inertial navigation
-                </Link>
-                , and{" "}
-                <Link
-                  target="_blank"
-                  href="https://en.wikipedia.org/wiki/Mecanum_wheel"
-                >
-                  mecanum omnidirectional traversal
-                </Link>
-                , pushing both my high school knowledge and the boundaries of
-                what's possible in FTC.
-              </Text>
-            </ProjectEntry>
-          </Flex>
-        </Flex>
+      <Flex direction="column">
+        {times(25, (index) => (
+          <TimelineProject
+            title={`Test ${index}`}
+            first={index === 0}
+            last={index === 24}
+            alternate={index % 2 === 1}
+            time="2023 - present"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </TimelineProject>
+        ))}
       </Flex>
     </>
   );
