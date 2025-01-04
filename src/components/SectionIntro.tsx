@@ -15,7 +15,7 @@ export function SectionIntro() {
               style={{
                 width: "12rem",
                 height: "12rem",
-                filter: "drop-shadow(1px 1px 2px var(--gray-a10))",
+                filter: "drop-shadow(0.125rem 0.25rem 0 var(--gray-12))",
               }}
             />
 

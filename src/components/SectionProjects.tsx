@@ -1,4 +1,5 @@
 import { Flex, Heading, Separator } from "@radix-ui/themes";
+import { ASPDoodle1, ASPDoodle2, ASPDoodle3, ASPDoodle4 } from "./ASPDoodle";
 import { TimelineProject } from "./TimelineProject";
 import { TimelineProjectType } from "./TimelineProject/constants";
 
@@ -33,9 +34,25 @@ export function SectionProjects() {
         </TimelineProject>
 
         <TimelineProject
+          title="F-4 Phantom II Digitalization"
+          type={TimelineProjectType.Educational}
+          time="2023"
+        >
+          {lorem}
+        </TimelineProject>
+
+        <TimelineProject
           title="Avionics in Rocketry Club"
           type={TimelineProjectType.Club}
           time="2023"
+        >
+          {lorem}
+        </TimelineProject>
+
+        <TimelineProject
+          title="Nerdy Birds"
+          type={TimelineProjectType.Club}
+          time="2019-2023"
         >
           {lorem}
         </TimelineProject>
@@ -55,6 +72,30 @@ export function SectionProjects() {
         >
           {lorem}
         </TimelineProject>
+
+        <TimelineProject
+          title="Abhi's Space Program"
+          type={TimelineProjectType.Hobby}
+          time="2013 - 2017"
+          last
+        >
+          Abhi's Space Programs (or ASP for short), was my first endeavour into
+          propulsion with absolutely no formal knowledge of rocketry (or safety
+          for that matter.) Pretty much all launches underwent the following
+          sequence:
+        </TimelineProject>
+      </Flex>
+
+      <Flex wrap="wrap" gap="2" justify="center">
+        <Flex gap="2" wrap="wrap" justify="center">
+          <ASPDoodle1 width="17rem" height="17rem" />
+          <ASPDoodle2 width="17rem" height="17rem" />
+        </Flex>
+
+        <Flex gap="2" wrap="wrap" justify="center">
+          <ASPDoodle3 width="17rem" height="17rem" />
+          <ASPDoodle4 width="17rem" height="17rem" />
+        </Flex>
       </Flex>
     </>
   );
