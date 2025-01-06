@@ -1,9 +1,7 @@
 import {
   EnvelopeClosedIcon,
-  FileTextIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
-  RocketIcon,
 } from "@radix-ui/react-icons";
 import { Code, Flex, Link, Separator, Text } from "@radix-ui/themes";
 import { imgur } from "../core/imgur";
@@ -80,20 +78,20 @@ export function SectionIntro() {
         <Separator orientation="vertical" />
 
         <Flex gap="4">
+          <Link href="#journey" size="4">
+            Journey
+          </Link>
+
+          <Text color="gray">•</Text>
+
           <Link href="#education" size="4">
-            <Flex align="center" gap="2">
-              <FileTextIcon width="1em" height="1em" />
-              Education
-            </Flex>
+            Education
           </Link>
 
           <Text color="gray">•</Text>
 
           <Link href="#projects" size="4">
-            <Flex align="center" gap="2">
-              <RocketIcon width="1em" height="1em" />
-              Projects
-            </Flex>
+            Projects
           </Link>
         </Flex>
       </Flex>

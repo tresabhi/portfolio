@@ -1,5 +1,5 @@
-import { Flex, Heading, Link, Quote, Separator, Text } from "@radix-ui/themes";
-import { ASPDoodle1, ASPDoodle2, ASPDoodle3, ASPDoodle4 } from "./ASPDoodle";
+import { Heading, Link, Separator, Text } from "@radix-ui/themes";
+import { ASPDoodle } from "./ASPDoodle";
 import { Project } from "./Project";
 import { TimelineProjectType } from "./Project/constants";
 
@@ -11,7 +11,7 @@ export function SectionProjects() {
     <>
       <Separator size="4" id="projects" />
 
-      <Heading size="8" align="center">
+      <Heading size="7" align="center">
         Key Projects
       </Heading>
 
@@ -134,24 +134,11 @@ export function SectionProjects() {
         </Text>
       </Project>
 
-      <Flex direction="column" align="center" gap="4">
-        <Flex wrap="wrap" gap="2" justify="center">
-          <Flex gap="2" wrap="wrap" justify="center">
-            <ASPDoodle1 width="17rem" height="17rem" />
-            <ASPDoodle2 width="17rem" height="17rem" />
-          </Flex>
-          <Flex gap="2" wrap="wrap" justify="center">
-            <ASPDoodle3 width="17rem" height="17rem" />
-            <ASPDoodle4 width="17rem" height="17rem" />
-          </Flex>
-        </Flex>
-
-        <Quote>Some jokes just don't take-off.</Quote>
-      </Flex>
+      <ASPDoodle />
 
       <Separator size="4" />
 
-      <Heading size="8" align="center">
+      <Heading size="7" align="center">
         Other Projects
       </Heading>
 

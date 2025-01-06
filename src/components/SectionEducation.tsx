@@ -14,7 +14,7 @@ export function SectionEducation() {
     <>
       <Separator size="4" id="education" />
 
-      <Heading size="8" align="center">
+      <Heading size="7" align="center">
         Education
       </Heading>
 
