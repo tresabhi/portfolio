@@ -22,8 +22,9 @@ export function SectionProjects() {
         images={["dFofBwn", "3Wo1TaL"]}
         skills={[
           "Advanced Thermodynamics",
-          "Computer Aided Design",
+          "SolidWorks",
           "Computer Fluid Dynamics",
+          "Python",
         ]}
       >
         <Text>
@@ -49,6 +50,13 @@ export function SectionProjects() {
           image: "TcC9m7e",
           youtube: "mjuX8Oxbl0k",
         }}
+        skills={[
+          "Autonomous Navigation",
+          "Computer Vision",
+          "Inertial Navigation",
+          "Team Leadership",
+          "Java",
+        ]}
       >
         <Text>
           As the team captain for 2023 and programmer for the Nerdy Birds{" "}
@@ -103,6 +111,7 @@ export function SectionProjects() {
         type={TimelineProjectType.Educational}
         time="2024"
         images={["vFL12f7", "hlfxY5G"]}
+        skills={["SolidWorks", "MATLAB"]}
       >
         {lorem}
       </Project>
@@ -150,6 +159,7 @@ export function SectionProjects() {
         title="BlitzKit"
         type={TimelineProjectType.Hobby}
         time="2022 - present"
+        skills={["TypeScript", "C++", "C#", "WebGL"]}
       >
         {lorem}
       </Project>
@@ -159,6 +169,7 @@ export function SectionProjects() {
         type={TimelineProjectType.Hobby}
         time="2021 - 2024"
         images={["8z390aL", "Mgqhi9N"]}
+        skills={["TypeScript"]}
       >
         My first proper endeavour into cyber-physical systems was the creation
         of my own CAD software. Though 2-dimensional, I was pushing my
@@ -170,6 +181,7 @@ export function SectionProjects() {
         title="Avionics in Rocketry Club"
         type={TimelineProjectType.Club}
         time="2023"
+        skills={["Cyber-Physical Integration", "C++", "Flutter"]}
       >
         {lorem}
       </Project>
@@ -178,6 +190,7 @@ export function SectionProjects() {
         title="F-4 Phantom II Digitalization"
         type={TimelineProjectType.Educational}
         time="2023"
+        skills={["SolidWorks"]}
       >
         {lorem}
       </Project>

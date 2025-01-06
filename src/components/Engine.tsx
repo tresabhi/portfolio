@@ -46,9 +46,8 @@ function Lighting() {
     />
   );
 }
-
 function Model() {
-  const model = useLoader(GLTFLoader, "/engine.glb");
+  const model = useLoader(GLTFLoader, `${import.meta.env.BASE_URL}engine.glb`);
   const scene = useMemo(() => {
     const scene = model.scene.clone(true);
 

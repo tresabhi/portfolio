@@ -1,4 +1,10 @@
-import { EnvelopeClosedIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import {
+  EnvelopeClosedIcon,
+  FileTextIcon,
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  RocketIcon,
+} from "@radix-ui/react-icons";
 import { Code, Flex, Link, Separator, Text } from "@radix-ui/themes";
 import { imgur } from "../core/imgur";
 import { Engine } from "./Engine";
@@ -37,29 +43,57 @@ export function SectionIntro() {
 
       <Flex justify="center" gap="6" align="center">
         <Flex gap="4">
-          <Link href="mailto:abhigyaan457@gmail.com" size="7" trim="end">
-            <EnvelopeClosedIcon width="1em" height="1em" />
+          <Link href="mailto:abhigyaan457@gmail.com" size="4" target="_blank">
+            <Flex align="center" gap="2">
+              <EnvelopeClosedIcon width="1em" height="1em" />
+              Gmail
+            </Flex>
           </Link>
+
+          <Text color="gray">•</Text>
 
           <Link
             href="https://www.linkedin.com/in/abhigyaan-deep-7b3a9b278/"
-            size="7"
+            size="4"
             target="_blank"
-            trim="end"
           >
-            <LinkedInLogoIcon width="1em" height="1em" />
+            <Flex align="center" gap="2">
+              <LinkedInLogoIcon width="1em" height="1em" />
+              LinkedIn
+            </Flex>
+          </Link>
+
+          <Text color="gray">•</Text>
+
+          <Link
+            href="https://www.linkedin.com/in/abhigyaan-deep-7b3a9b278/"
+            size="4"
+            target="_blank"
+          >
+            <Flex align="center" gap="2">
+              <GitHubLogoIcon width="1em" height="1em" />
+              GitHub
+            </Flex>
           </Link>
         </Flex>
 
-        <Separator orientation="vertical" size="4" />
+        <Separator orientation="vertical" />
 
         <Flex gap="4">
           <Link href="#education" size="4">
-            Education
+            <Flex align="center" gap="2">
+              <FileTextIcon width="1em" height="1em" />
+              Education
+            </Flex>
           </Link>
+
           <Text color="gray">•</Text>
+
           <Link href="#projects" size="4">
-            Projects
+            <Flex align="center" gap="2">
+              <RocketIcon width="1em" height="1em" />
+              Projects
+            </Flex>
           </Link>
         </Flex>
       </Flex>

@@ -63,30 +63,32 @@ export function Project({
           <Text color="gray">{time}</Text>
         </Flex>
 
-        <Flex direction="column" gap="2">
-          {typeof children === "string" ? <Text>{children}</Text> : children}
-        </Flex>
-
         {skills !== undefined && (
-          <Flex gap="1">
+          <Flex gap="1" wrap="wrap">
             {skills.map((skill) => (
-              <Badge color="gray">{skill}</Badge>
+              <Badge size="2" color="gray">
+                {skill}
+              </Badge>
             ))}
           </Flex>
         )}
+
+        <Flex direction="column" gap="2">
+          {typeof children === "string" ? <Text>{children}</Text> : children}
+        </Flex>
       </Flex>
 
-      <Flex
-        flexGrow="1"
-        direction="column"
-        flexBasis="0"
-        align="center"
-        justify="center"
-        gap="2"
-        position="relative"
-      >
-        {(video || images) &&
-          (() => {
+      {(images || video) && (
+        <Flex
+          flexGrow="1"
+          direction="column"
+          flexBasis="0"
+          align="center"
+          justify="center"
+          gap="2"
+          position="relative"
+        >
+          {(() => {
             const box = (
               <Box
                 style={{
@@ -118,41 +120,42 @@ export function Project({
             return box;
           })()}
 
-        {images && (
-          <SegmentedControl.Root
-            size="1"
-            value={`${imageIndex}`}
-            onValueChange={(value) => {
-              setImageIndex(parseInt(value));
-              setCycle(false);
-            }}
-          >
-            {images.map((_, index) => (
-              <SegmentedControl.Item value={`${index}`}>
-                {index + 1}
-              </SegmentedControl.Item>
-            ))}
-          </SegmentedControl.Root>
-        )}
+          {images && (
+            <SegmentedControl.Root
+              size="1"
+              value={`${imageIndex}`}
+              onValueChange={(value) => {
+                setImageIndex(parseInt(value));
+                setCycle(false);
+              }}
+            >
+              {images.map((_, index) => (
+                <SegmentedControl.Item value={`${index}`}>
+                  {index + 1}
+                </SegmentedControl.Item>
+              ))}
+            </SegmentedControl.Root>
+          )}
 
-        {video && (
-          <IconButton
-            size="4"
-            variant="surface"
-            style={{
-              cursor: "pointer",
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              pointerEvents: "none",
-            }}
-            tabIndex={-1}
-          >
-            <PlayIcon />
-          </IconButton>
-        )}
-      </Flex>
+          {video && (
+            <IconButton
+              size="4"
+              variant="surface"
+              style={{
+                cursor: "pointer",
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                pointerEvents: "none",
+              }}
+              tabIndex={-1}
+            >
+              <PlayIcon />
+            </IconButton>
+          )}
+        </Flex>
+      )}
     </Flex>
   );
 }
