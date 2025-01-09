@@ -3,8 +3,9 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { Box, Code, Flex, Link, Separator, Text } from "@radix-ui/themes";
+import { Code, Flex, Link, Separator, Text } from "@radix-ui/themes";
 import { imgur } from "../core/imgur";
+import { Engine } from "./Engine";
 import { IntroArrowDoodle } from "./IntroArrowDoodle";
 import { Section } from "./Section";
 
@@ -14,7 +15,7 @@ export function SectionIntro() {
       appearance="dark"
       style={{ position: "relative", overflow: "clip" }}
     >
-      <Box
+      {/* <Box
         position="absolute"
         width="100%"
         height="100%"
@@ -28,7 +29,9 @@ export function SectionIntro() {
           filter: "invert(100%) brightness(50%)",
           transform: "translate(25%, 0)",
         }}
-      />
+      /> */}
+
+      <Engine />
 
       <Flex direction="column" align="start" gap="5" pl="5">
         <Flex align="end" gap="6">
