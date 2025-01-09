@@ -16,9 +16,6 @@ export function Page() {
         <Flex
           direction="column"
           flexGrow="1"
-          px="9"
-          py="9"
-          gap="9"
           maxWidth="80rem"
           style={{ background: "var(--gray-1)", boxShadow: "var(--shadow-3)" }}
         >

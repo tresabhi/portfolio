@@ -1,6 +1,7 @@
-import { Flex, Heading, Separator, Text } from "@radix-ui/themes";
+import { Flex, Heading, Text } from "@radix-ui/themes";
 import { ASPDoodle } from "./ASPDoodle";
 import { EvolutionDoodle } from "./EvolutionDoodle";
+import { Section } from "./Section";
 
 const BIRTH = new Date(2005, 3, 7);
 
@@ -9,9 +10,7 @@ export function SectionJourney() {
   const age = Math.floor(timeElapsed / (1000 * 60 * 60 * 24 * 365));
 
   return (
-    <>
-      <Separator size="4" id="journey" />
-
+    <Section id="journey">
       <Heading size="7" align="center">
         My Journey
       </Heading>
@@ -24,8 +23,8 @@ export function SectionJourney() {
           child, but Mechanix, a toy of bolts and beams, shifted my focus to
           engineering. Building helicopters and battle-bots sparked my
           creativity, and STS-135 ignited my passion for flight. This love for
-          rockets and airplanes continued strong through my childhood, even if a
-          few missions would've been better left scrubbed...
+          rockets and airplanes continued strong through my childhood, even when
+          faced with missions that would've been better scrubbed:
         </Text>
       </Flex>
 
@@ -48,6 +47,6 @@ export function SectionJourney() {
           </Text>
         </Flex>
       </Flex>
-    </>
+    </Section>
   );
 }
