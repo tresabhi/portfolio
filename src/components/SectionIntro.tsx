@@ -6,7 +6,6 @@ import {
 import { Code, Flex, Link, Separator, Text } from "@radix-ui/themes";
 import { imgur } from "../core/imgur";
 import { Engine } from "./Engine";
-import { IntroArrowDoodle } from "./IntroArrowDoodle";
 import { Section } from "./Section";
 
 export function SectionIntro() {
@@ -18,22 +17,53 @@ export function SectionIntro() {
       {/* <Box
         position="absolute"
         width="100%"
-        height="100%"
-        top="0"
-        left="0"
+        height="200%"
+        top="100%"
+        left="50%"
         style={{
-          backgroundImage: `url(${imgur("QldKqwi")})`,
-          backgroundSize: "60rem",
+          backgroundImage: `url(${imgur("StalQX6")})`,
+          backgroundSize: "80%",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          filter: "invert(100%) brightness(50%)",
-          transform: "translate(25%, 0)",
+          filter: "invert(100%) brightness(25%)",
+          transform: "translate(-50%, -50%)",
         }}
       /> */}
 
       <Engine />
 
-      <Flex direction="column" align="start" gap="5" pl="5">
+      <Flex
+        justify="between"
+        align="center"
+        position="relative"
+        gap={{
+          initial: "6",
+          md: "0",
+        }}
+        direction={{
+          initial: "column",
+          md: "row-reverse",
+        }}
+      >
+        <img
+          alt="Abhi"
+          src={imgur("2aKUhJV", { format: "jpeg" })}
+          style={{
+            width: "20rem",
+            height: "20rem",
+          }}
+        />
+
+        <Flex direction="column">
+          <Text size="7" style={{ width: "31rem" }}>
+            Hi, I'm <b>Abhi</b>, an <Code highContrast>aerospace engineer</Code>{" "}
+            with a <i>ton</i> of projects and <i>infinite</i> passion for
+            self-learning.
+          </Text>
+        </Flex>
+      </Flex>
+
+      {/* <Flex direction="column" align="start" gap="5">
         <Flex align="end" gap="6">
           <img
             alt="Abhi"
@@ -53,7 +83,7 @@ export function SectionIntro() {
           Hi, I'm <b>Abhi</b>, an <Code>aerospace engineer</Code> with a{" "}
           <i>ton</i> of projects and <i>infinite</i> passion for self-learning.
         </Text>
-      </Flex>
+      </Flex> */}
 
       <Flex justify="center" gap="6" align="center" position="relative">
         <Flex gap="4">

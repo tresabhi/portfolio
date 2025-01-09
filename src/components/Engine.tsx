@@ -1,44 +1,44 @@
 import { Box } from "@radix-ui/themes";
-import { Environment } from "@react-three/drei";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { Suspense, useMemo, useRef } from "react";
 import {
   EdgesGeometry,
+  Fog,
   LineBasicMaterial,
   LineSegments,
   Mesh,
   MeshBasicMaterial,
+  Vector3,
   type Group,
 } from "three";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import { useOnScreen } from "../hooks/useOnScreen";
+
+const near0 = 2;
+const near1 = 2;
+const far0 = near1;
+const far1 = 15;
 
 export function Engine() {
   const canvas = useRef<HTMLCanvasElement>(null);
   const onScreen = useOnScreen(canvas);
 
   return (
-    <Box
-      flexGrow="1"
-      position="absolute"
-      width="100%"
-      height="100%"
-      top="0"
-      left="0"
-      style={{
-        transform: "translate(25%, 0)",
-      }}
-    >
+    <Box position="absolute" width="100%" height="100%" top="0" left="0">
       <Box position="absolute" top="0" left="0" width="100%" height="100%">
         <Canvas
           ref={canvas}
           frameloop={onScreen ? "always" : "never"}
           camera={{
-            // fov: 25,
-            position: [3, 1, -3],
+            fov: 25,
+            position: new Vector3(5, 1, -5).multiplyScalar(1),
+          }}
+          scene={{
+            fog: new Fog(0x111113, near0, far0),
           }}
         >
           <Suspense fallback={null}>
+            <FogManager />
             {/* <Lighting /> */}
             <Model />
           </Suspense>
@@ -48,18 +48,24 @@ export function Engine() {
   );
 }
 
-function Lighting() {
-  return (
-    <Environment
-      preset="sunset"
-      environmentIntensity={2}
-      environmentRotation={[Math.PI / 2, 0, 0]}
-    />
-  );
+function FogManager() {
+  const T = 1;
+
+  useFrame(({ clock, scene }) => {
+    const t = Math.min(1, clock.elapsedTime / T);
+    const fog = scene.fog as Fog | undefined;
+
+    if (!fog) return;
+
+    fog.near = near0 + (near1 - near0) * t;
+    fog.far = far0 + (far1 - far0) * t;
+  });
+
+  return null;
 }
 
 const outlineMaterial = new LineBasicMaterial({
-  color: 0x808080,
+  color: 0x505050,
   linewidth: 190,
 });
 
@@ -72,8 +78,10 @@ function Model() {
 
     scene.children.forEach((child) => {
       if (child instanceof Mesh) {
+        child.renderOrder = -1;
         child.material = new MeshBasicMaterial({
-          color: 0x404040,
+          depthWrite: true,
+          colorWrite: false,
         });
 
         return;
@@ -88,7 +96,7 @@ function Model() {
 
         child.remove(grandChild);
 
-        const edgesGeometry = new EdgesGeometry(grandChild.geometry, 85);
+        const edgesGeometry = new EdgesGeometry(grandChild.geometry, 80);
         const lineSegments = new LineSegments(edgesGeometry, outlineMaterial);
 
         lineSegments.position.copy(grandChild.position);
