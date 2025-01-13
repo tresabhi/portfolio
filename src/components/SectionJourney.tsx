@@ -1,6 +1,6 @@
 import { Flex, Heading, Text } from "@radix-ui/themes";
-import { ASPDoodle } from "./ASPDoodle";
-import { EvolutionDoodle } from "./EvolutionDoodle";
+import { ASPDoodle } from "./Doodles/ASP";
+import { EvolutionDoodle } from "./Doodles/Evolution";
 import { Section } from "./Section";
 
 const BIRTH = new Date(2005, 3, 7);

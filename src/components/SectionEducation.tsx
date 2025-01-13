@@ -1,9 +1,18 @@
-import { Badge, Box, Flex, Heading, Link, Text } from "@radix-ui/themes";
-import { imgur, ImgurSize } from "../core/imgur";
+import {
+  Badge,
+  Box,
+  Flex,
+  Heading,
+  Link,
+  Separator,
+  Text,
+} from "@radix-ui/themes";
 import { wiki } from "../core/wiki";
-import { RocketDoodle } from "./RocketDoodle";
+import { PerseveranceDoodle } from "./Doodles/Perseverance";
+import { RocketDoodle } from "./Doodles/Rocket";
+import { SpaceShuttleDoodle } from "./Doodles/SpaceShuttle";
+import { TowerDoodle } from "./Doodles/Tower";
 import { Section } from "./Section";
-import { TowerDoodle } from "./TowerDoodle";
 
 const BIRTH = new Date(2005, 3, 7);
 const GPA = 3.83;
@@ -119,28 +128,21 @@ export function SectionEducation() {
             </Box>
           </Flex>
         </Flex>
-      </Section>
 
-      <Section>
-        <Flex direction="column" gap="6">
-          <Flex gap="7" align="center" justify="center">
-            <Box
-              width="10rem"
-              height="10rem"
-              flexShrink="0"
-              style={{
-                backgroundImage: `url(${imgur("4DvrZho", {
-                  format: "jpeg",
-                  size: ImgurSize.MediumThumbnail,
-                })})`,
-                backgroundSize: "cover",
-                borderRadius: "var(--radius-4)",
-                boxShadow: "var(--shadow-5)",
-              }}
-            />
+        <Flex justify="center">
+          <Separator size="3" />
+        </Flex>
+
+        <Flex direction="column" gap="7">
+          <Flex gap="8" align="center" justify="center">
+            <Text color="indigo" highContrast>
+              <SpaceShuttleDoodle width="8rem" height="8rem" />
+            </Text>
 
             <Flex direction="column" gap="2">
-              <Heading size="5">Why Aerospace?</Heading>
+              <Heading size="5" color="indigo">
+                Why Aerospace?
+              </Heading>
 
               <Text
                 color="gray"
@@ -158,24 +160,15 @@ export function SectionEducation() {
             </Flex>
           </Flex>
 
-          <Flex gap="7" align="center" justify="center">
-            <Box
-              width="10rem"
-              height="10rem"
-              flexShrink="0"
-              style={{
-                backgroundImage: `url(${imgur("TDN9Exk", {
-                  format: "jpeg",
-                  size: ImgurSize.MediumThumbnail,
-                })})`,
-                backgroundSize: "cover",
-                borderRadius: "var(--radius-4)",
-                boxShadow: "var(--shadow-5)",
-              }}
-            />
+          <Flex gap="8" align="center" justify="center">
+            <Text color="jade" highContrast>
+              <PerseveranceDoodle width="8rem" height="8rem" />
+            </Text>
 
             <Flex direction="column" gap="2">
-              <Heading size="5">Why C-P Systems?</Heading>
+              <Heading size="5" color="jade">
+                Why C-P Systems?
+              </Heading>
 
               <Text
                 color="gray"
@@ -184,17 +177,18 @@ export function SectionEducation() {
                 style={{ maxWidth: "40rem" }}
                 wrap="pretty"
               >
-                I love creating simulations and websites like this one! The
-                ability to transform abstractions into functional, visual
-                realities within nanoseconds is endlessly fascinating. It feels
-                natural to combine my skills with computers to breathe life into
-                complex physical systems through seamless integration and
-                design.
+                I love creating robots, simulations, and websites like this one!
+                The ability to transform abstractions into functional, visual
+                realities within seconds is fascinating. It feels natural to
+                combine my skills with computers to breathe life into complex
+                physical systems through seamless integration and design.
               </Text>
             </Flex>
           </Flex>
         </Flex>
       </Section>
+
+      <Section></Section>
     </>
   );
 }
