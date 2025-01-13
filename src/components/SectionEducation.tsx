@@ -37,12 +37,12 @@ export function SectionEducation() {
             align="center"
             width="fit-content"
           >
-            <Text color="indigo" highContrast>
+            <Text color="red" highContrast>
               <RocketDoodle width="10rem" height="10rem" />
             </Text>
 
             <Flex align="center" gap="3">
-              <Heading color="indigo">Aerospace Engineering</Heading>
+              <Heading color="red">Aerospace Engineering</Heading>
               <Badge color="gray">2023 - 2027</Badge>
             </Flex>
 
@@ -56,7 +56,7 @@ export function SectionEducation() {
                   href={wiki("Combustion_chamber")}
                   target="_blank"
                   underline="always"
-                  color="indigo"
+                  color="red"
                 >
                   combustion chambers
                 </Link>{" "}
@@ -65,7 +65,7 @@ export function SectionEducation() {
                   href={wiki("Avionics")}
                   target="_blank"
                   underline="always"
-                  color="indigo"
+                  color="red"
                 >
                   avionics
                 </Link>
@@ -96,7 +96,7 @@ export function SectionEducation() {
                 As a natural extension of my aerospace passion, I'm pursuing a{" "}
                 <b>minor</b> in Cyber-Physical Systems to master the art of
                 integrating software with hardware. I am pursuing cutting-edge
-                fields like{" "}
+                technologies like{" "}
                 <Link
                   href={wiki("Autonomous_robot")}
                   target="_blank"
@@ -133,14 +133,14 @@ export function SectionEducation() {
           <Separator size="3" />
         </Flex>
 
-        <Flex direction="column" gap="7">
-          <Flex gap="8" align="center" justify="center">
-            <Text color="indigo" highContrast>
+        <Flex direction="column" gap="9">
+          <Flex gap="8" align="center" justify="center" py="2">
+            <Text color="red" highContrast>
               <SpaceShuttleDoodle width="8rem" height="8rem" />
             </Text>
 
             <Flex direction="column" gap="2">
-              <Heading size="5" color="indigo">
+              <Heading size="5" color="red">
                 Why Aerospace?
               </Heading>
 
@@ -160,7 +160,7 @@ export function SectionEducation() {
             </Flex>
           </Flex>
 
-          <Flex gap="8" align="center" justify="center">
+          <Flex gap="8" align="center" justify="center" py="2">
             <Text color="jade" highContrast>
               <PerseveranceDoodle width="8rem" height="8rem" />
             </Text>

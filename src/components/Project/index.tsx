@@ -60,7 +60,7 @@ export function Project({
             {type === ProjectType.Hobby && <Badge color="pink">Hobby</Badge>}
           </Flex>
 
-          <Text color="gray">{time}</Text>
+          {/* <Text color="gray">{time}</Text> */}
         </Flex>
 
         {skills !== undefined && (
