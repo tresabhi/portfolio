@@ -1,11 +1,12 @@
-import { Badge, Box, Flex, Heading, Text } from "@radix-ui/themes";
-import { GPA } from "../core/constants";
+import { Badge, Box, Flex, Heading, Link, Text } from "@radix-ui/themes";
 import { imgur, ImgurSize } from "../core/imgur";
+import { wiki } from "../core/wiki";
 import { RocketDoodle } from "./RocketDoodle";
 import { Section } from "./Section";
 import { TowerDoodle } from "./TowerDoodle";
 
 const BIRTH = new Date(2005, 3, 7);
+const GPA = 3.83;
 
 export function SectionEducation() {
   const timeElapsed = Date.now() - BIRTH.getTime();
@@ -14,6 +15,10 @@ export function SectionEducation() {
   return (
     <>
       <Section id="education" appearance="dark">
+        <Flex justify="center">
+          <Heading size="7">Education</Heading>
+        </Flex>
+
         <Flex justify="between">
           <Flex
             direction="column"
@@ -32,10 +37,30 @@ export function SectionEducation() {
               <Badge color="gray">2023 - 2027</Badge>
             </Flex>
 
-            <Box maxWidth="23rem">
+            <Box maxWidth="30rem">
               <Text wrap="pretty">
-                Hailing from <b>Iowa State University</b> with a GPA of {GPA}, I
-                am completing my bachelor's degree in Aerospace Engineering.
+                <Text weight="bold">Iowa State University</Text> has been the
+                launchpad for my aerospace journey, where I'm tackling
+                everything from advanced thermodynamics to structural design.
+                With a GPA of {GPA}, I am immersed in projects like designing{" "}
+                <Link
+                  href={wiki("Combustion_chamber")}
+                  target="_blank"
+                  underline="always"
+                  color="indigo"
+                >
+                  combustion chambers
+                </Link>{" "}
+                and modeling{" "}
+                <Link
+                  href={wiki("Avionics")}
+                  target="_blank"
+                  underline="always"
+                  color="indigo"
+                >
+                  avionics
+                </Link>
+                .
               </Text>
             </Box>
           </Flex>
@@ -57,10 +82,39 @@ export function SectionEducation() {
               <Badge color="gray">2025 - 2027</Badge>
             </Flex>
 
-            <Box maxWidth="23rem">
+            <Box maxWidth="30rem">
               <Text wrap="pretty">
-                In combination with my major, I am furthering my expertise with
-                computers with a minor in Cyber Physical Systems.
+                As a natural extension of my aerospace passion, I'm pursuing a{" "}
+                <b>minor</b> in Cyber-Physical Systems to master the art of
+                integrating software with hardware. I am pursuing cutting-edge
+                fields like{" "}
+                <Link
+                  href={wiki("Autonomous_robot")}
+                  target="_blank"
+                  underline="always"
+                  color="jade"
+                >
+                  autonomous navigation
+                </Link>
+                ,{" "}
+                <Link
+                  href={wiki("Simulation_modeling")}
+                  target="_blank"
+                  underline="always"
+                  color="jade"
+                >
+                  simulation design
+                </Link>
+                , and{" "}
+                <Link
+                  href={wiki("Embedded_system")}
+                  target="_blank"
+                  underline="always"
+                  color="jade"
+                >
+                  embedded systems
+                </Link>
+                .
               </Text>
             </Box>
           </Flex>

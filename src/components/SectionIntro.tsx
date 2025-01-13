@@ -3,7 +3,7 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { Box, Flex, Link, Text } from "@radix-ui/themes";
+import { Box, Code, Flex, Link, Text } from "@radix-ui/themes";
 import { imgur } from "../core/imgur";
 import { Engine } from "./Engine";
 import { Section } from "./Section";
@@ -21,9 +21,9 @@ export function SectionIntro() {
           <Flex flexGrow="1" flexBasis="0" maxWidth="40rem">
             <Text size="6" wrap="pretty">
               Hi, I'm <Text weight="bold">Abhi</Text>—an{" "}
-              <Text weight="bold" color="red">
+              <Code variant="solid" color="red">
                 Aerospace Engineer
-              </Text>{" "}
+              </Code>{" "}
               driven by an insatiable curiosity and a passion for turning
               ambitious ideas into reality. From designing and manufacturing{" "}
               <u>jet engines</u> and pioneering in <u>autonomous robotics</u> to
