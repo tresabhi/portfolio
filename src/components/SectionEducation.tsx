@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Separator, Text } from "@radix-ui/themes";
+import { Badge, Box, Flex, Heading, Text } from "@radix-ui/themes";
 import { GPA } from "../core/constants";
 import { imgur, ImgurSize } from "../core/imgur";
 import { RocketDoodle } from "./RocketDoodle";
@@ -13,60 +13,61 @@ export function SectionEducation() {
 
   return (
     <>
-      <Separator size="4" />
+      <Section id="education" appearance="dark">
+        <Flex justify="between">
+          <Flex
+            direction="column"
+            gap="3"
+            flexBasis="0"
+            flexGrow="1"
+            align="center"
+            width="fit-content"
+          >
+            <Text color="indigo" highContrast>
+              <RocketDoodle width="10rem" height="10rem" />
+            </Text>
 
-      <Section id="education">
-        <Heading size="7" align="center">
-          Education
-        </Heading>
-
-        <Flex direction="column" gap="4">
-          <Flex justify="center">
-            <Flex direction="column" flexGrow="1" maxWidth="50rem" gap="4">
-              <Flex justify="between" width="100%" px="8">
-                <Text color="indigo" highContrast>
-                  <RocketDoodle width="10rem" height="10rem" />
-                </Text>
-
-                <Text color="jade" highContrast>
-                  <TowerDoodle width="10rem" height="10rem" />
-                </Text>
-              </Flex>
-
-              <Flex gap={{ initial: "6", md: "9" }} justify="between">
-                <Flex direction="column" gap="3" flexBasis="0" flexGrow="1">
-                  <Flex direction="column">
-                    <Heading color="indigo">Aerospace Engineering</Heading>
-                    <Text color="gray" trim="end">
-                      2023 - 2027
-                    </Text>
-                  </Flex>
-
-                  <Text wrap="pretty">
-                    Hailing from <b>Iowa State University</b> with a GPA of{" "}
-                    {GPA}, I am completing my bachelor's degree in Aerospace
-                    Engineering.
-                  </Text>
-                </Flex>
-
-                <Flex direction="column" gap="3" flexBasis="0" flexGrow="1">
-                  <Flex direction="column" align="end">
-                    <Heading color="jade">Cyber Physical Systems</Heading>
-                    <Text color="gray" trim="end">
-                      2025 - 2027
-                    </Text>
-                  </Flex>
-
-                  <Text align="right" wrap="pretty">
-                    In combination with my major, I am furthering my expertise
-                    with computers with a minor in Cyber Physical Systems.
-                  </Text>
-                </Flex>
-              </Flex>
+            <Flex align="center" gap="3">
+              <Heading color="indigo">Aerospace Engineering</Heading>
+              <Badge color="gray">2023 - 2027</Badge>
             </Flex>
+
+            <Box maxWidth="23rem">
+              <Text wrap="pretty">
+                Hailing from <b>Iowa State University</b> with a GPA of {GPA}, I
+                am completing my bachelor's degree in Aerospace Engineering.
+              </Text>
+            </Box>
+          </Flex>
+
+          <Flex
+            direction="column"
+            gap="3"
+            flexBasis="0"
+            flexGrow="1"
+            align="center"
+            width="fit-content"
+          >
+            <Text color="jade" highContrast>
+              <TowerDoodle width="10rem" height="10rem" />
+            </Text>
+
+            <Flex align="center" gap="3">
+              <Heading color="jade">Cyber Physical Systems</Heading>
+              <Badge color="gray">2025 - 2027</Badge>
+            </Flex>
+
+            <Box maxWidth="23rem">
+              <Text wrap="pretty">
+                In combination with my major, I am furthering my expertise with
+                computers with a minor in Cyber Physical Systems.
+              </Text>
+            </Box>
           </Flex>
         </Flex>
+      </Section>
 
+      <Section>
         <Flex direction="column" gap="6">
           <Flex gap="7" align="center" justify="center">
             <Box
