@@ -14,10 +14,10 @@ import {
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import { useOnScreen } from "../hooks/useOnScreen";
 
-const near0 = 2;
-const near1 = 2;
+const near0 = 1;
+const near1 = 7;
 const far0 = near1;
-const far1 = 15;
+const far1 = 10;
 
 export function Engine() {
   const canvas = useRef<HTMLCanvasElement>(null);
@@ -31,7 +31,7 @@ export function Engine() {
           frameloop={onScreen ? "always" : "never"}
           camera={{
             fov: 25,
-            position: new Vector3(5, 1, -5).multiplyScalar(1),
+            position: new Vector3(5, 5, -8).multiplyScalar(0.7),
           }}
           scene={{
             fog: new Fog(0x111113, near0, far0),
@@ -39,7 +39,6 @@ export function Engine() {
         >
           <Suspense fallback={null}>
             <FogManager />
-            {/* <Lighting /> */}
             <Model />
           </Suspense>
         </Canvas>
@@ -65,7 +64,7 @@ function FogManager() {
 }
 
 const outlineMaterial = new LineBasicMaterial({
-  color: 0x505050,
+  color: 0x454545,
   linewidth: 190,
 });
 
@@ -73,8 +72,6 @@ function Model() {
   const model = useLoader(GLTFLoader, `${import.meta.env.BASE_URL}engine.glb`);
   const scene = useMemo(() => {
     const scene = model.scene.clone(true);
-
-    console.log(scene);
 
     scene.children.forEach((child) => {
       if (child instanceof Mesh) {
@@ -117,7 +114,7 @@ function Model() {
   });
 
   return (
-    <group ref={wrapper} position={[2, 0, 0]}>
+    <group ref={wrapper} position={[2.3, 0, 0]}>
       <primitive object={scene} />
     </group>
   );

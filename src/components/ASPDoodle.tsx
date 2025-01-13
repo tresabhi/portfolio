@@ -201,16 +201,16 @@ export function ASPDoodle() {
     <Flex direction="column" align="center" gap="3">
       <Flex wrap="wrap" gap="2" justify="center">
         <Flex gap="2" wrap="wrap" justify="center">
-          <ASPDoodle1 width="12rem" height="12rem" />
-          <ASPDoodle2 width="12rem" height="12rem" />
+          <ASPDoodle1 width="15rem" height="15rem" />
+          <ASPDoodle2 width="15rem" height="15rem" />
         </Flex>
         <Flex gap="2" wrap="wrap" justify="center">
-          <ASPDoodle3 width="12rem" height="12rem" />
-          <ASPDoodle4 width="12rem" height="12rem" />
+          <ASPDoodle3 width="15rem" height="15rem" />
+          <ASPDoodle4 width="15rem" height="15rem" />
         </Flex>
       </Flex>
 
-      <Quote>Some jokes just don't take-off.</Quote>
+      <Quote>Abhi's Space Program didn't quite take off...</Quote>
     </Flex>
   );
 }

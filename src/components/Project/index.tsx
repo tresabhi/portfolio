@@ -9,7 +9,7 @@ import {
   SegmentedControl,
   Text,
 } from "@radix-ui/themes";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { imgur } from "../../core/imgur";
 import { TimelineProjectType as ProjectType } from "./constants";
 
@@ -32,8 +32,8 @@ export function Project({
   video,
   skills,
 }: ProjectProps) {
+  const cycleTime = useRef(5000 + 1000 * (Math.random() - 0.5));
   const [imageIndex, setImageIndex] = useState(0);
-  const [closeup, setCloseup] = useState(false);
   const [cycle, setCycle] = useState(true);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export function Project({
 
     const interval = setInterval(() => {
       setImageIndex((index) => (index + 1) % (images?.length ?? 1));
-    }, 5000);
+    }, cycleTime.current);
 
     return () => clearInterval(interval);
   }, [cycle]);
@@ -65,6 +65,9 @@ export function Project({
 
         {skills !== undefined && (
           <Flex gap="1" wrap="wrap">
+            <Text weight="bold" mr="1">
+              Skills used:
+            </Text>{" "}
             {skills.map((skill) => (
               <Badge size="2" color="gray">
                 {skill}
@@ -92,7 +95,6 @@ export function Project({
             const box = (
               <Box
                 style={{
-                  cursor: "pointer",
                   backgroundImage: `url(${imgur(
                     images ? images[imageIndex] : video!.image
                   )})`,
@@ -103,7 +105,6 @@ export function Project({
                   boxShadow: "var(--shadow-2)",
                   borderRadius: "var(--radius-2)",
                 }}
-                onClick={() => setCloseup(true)}
               />
             );
 

@@ -3,7 +3,7 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { Code, Flex, Link, Separator, Text } from "@radix-ui/themes";
+import { Box, Flex, Link, Text } from "@radix-ui/themes";
 import { imgur } from "../core/imgur";
 import { Engine } from "./Engine";
 import { Section } from "./Section";
@@ -14,131 +14,105 @@ export function SectionIntro() {
       appearance="dark"
       style={{ position: "relative", overflow: "clip" }}
     >
-      {/* <Box
-        position="absolute"
-        width="100%"
-        height="200%"
-        top="100%"
-        left="50%"
-        style={{
-          backgroundImage: `url(${imgur("StalQX6")})`,
-          backgroundSize: "80%",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          filter: "invert(100%) brightness(25%)",
-          transform: "translate(-50%, -50%)",
-        }}
-      /> */}
-
       <Engine />
 
-      <Flex
-        justify="between"
-        align="center"
-        position="relative"
-        gap={{
-          initial: "6",
-          md: "0",
-        }}
-        direction={{
-          initial: "column",
-          md: "row-reverse",
-        }}
-      >
-        <img
-          alt="Abhi"
-          src={imgur("2aKUhJV", { format: "jpeg" })}
-          style={{
-            width: "20rem",
-            height: "20rem",
-          }}
-        />
+      <Flex direction="column" flexGrow="1" gap="9" position="relative">
+        <Flex justify="between" gap="9" align="center" py="9">
+          <Flex flexGrow="1" flexBasis="0" maxWidth="40rem">
+            <Text size="6" wrap="pretty">
+              Hi, I'm <Text weight="bold">Abhi</Text>—an{" "}
+              <Text weight="bold" color="red">
+                Aerospace Engineer
+              </Text>{" "}
+              driven by an insatiable curiosity and a passion for turning
+              ambitious ideas into reality. From designing and manufacturing{" "}
+              <u>jet engines</u> and pioneering in <u>autonomous robotics</u> to
+              building software that bridges the gap between the digital and
+              physical worlds, I am fueled by a love for <i>exploration</i> and{" "}
+              <i>self-learning</i>. With every project, I strive to push
+              boundaries and inspire innovation in aerospace and beyond.
+            </Text>
+          </Flex>
 
-        <Flex direction="column">
-          <Text size="7" style={{ width: "31rem" }}>
-            Hi, I'm <b>Abhi</b>, an <Code highContrast>aerospace engineer</Code>{" "}
-            with a <i>ton</i> of projects and <i>infinite</i> passion for
-            self-learning.
-          </Text>
-        </Flex>
-      </Flex>
-
-      {/* <Flex direction="column" align="start" gap="5">
-        <Flex align="end" gap="6">
-          <img
-            alt="Abhi"
-            src={imgur("2aKUhJV", { format: "jpeg" })}
+          <Box
+            flexGrow="0"
+            overflow="hidden"
+            width="15rem"
+            height="15rem"
             style={{
-              width: "12rem",
-              height: "12rem",
+              backgroundImage: `url(${imgur("FEx150k", { format: "jpeg" })})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "45% 25%",
+              objectPosition: "top",
+              borderRadius: "var(--radius-3)",
+              boxShadow: "var(--shadow-2)",
             }}
-          />
-
-          <Text color="blue" highContrast>
-            <IntroArrowDoodle style={{ height: "7rem", width: "10rem" }} />
-          </Text>
+          >
+            <Box
+              width="100%"
+              height="100%"
+              style={{
+                backgroundColor: "var(--gray-a3)",
+                filter: "invert(1)",
+              }}
+            />
+          </Box>
         </Flex>
 
-        <Text size="7" style={{ width: "31rem" }}>
-          Hi, I'm <b>Abhi</b>, an <Code>aerospace engineer</Code> with a{" "}
-          <i>ton</i> of projects and <i>infinite</i> passion for self-learning.
-        </Text>
-      </Flex> */}
+        <Flex justify="between" align="center" position="relative">
+          <Flex gap="4">
+            <Link href="mailto:abhigyaan457@gmail.com" size="4" target="_blank">
+              <Flex align="center" gap="2">
+                <EnvelopeClosedIcon width="1em" height="1em" />
+                Gmail
+              </Flex>
+            </Link>
 
-      <Flex justify="center" gap="6" align="center" position="relative">
-        <Flex gap="4">
-          <Link href="mailto:abhigyaan457@gmail.com" size="4" target="_blank">
-            <Flex align="center" gap="2">
-              <EnvelopeClosedIcon width="1em" height="1em" />
-              Gmail
-            </Flex>
-          </Link>
+            <Text color="gray">•</Text>
 
-          <Text color="gray">•</Text>
+            <Link
+              href="https://www.linkedin.com/in/abhigyaan-deep-7b3a9b278/"
+              size="4"
+              target="_blank"
+            >
+              <Flex align="center" gap="2">
+                <LinkedInLogoIcon width="1em" height="1em" />
+                LinkedIn
+              </Flex>
+            </Link>
 
-          <Link
-            href="https://www.linkedin.com/in/abhigyaan-deep-7b3a9b278/"
-            size="4"
-            target="_blank"
-          >
-            <Flex align="center" gap="2">
-              <LinkedInLogoIcon width="1em" height="1em" />
-              LinkedIn
-            </Flex>
-          </Link>
+            <Text color="gray">•</Text>
 
-          <Text color="gray">•</Text>
+            <Link
+              href="https://www.linkedin.com/in/abhigyaan-deep-7b3a9b278/"
+              size="4"
+              target="_blank"
+            >
+              <Flex align="center" gap="2">
+                <GitHubLogoIcon width="1em" height="1em" />
+                GitHub
+              </Flex>
+            </Link>
+          </Flex>
 
-          <Link
-            href="https://www.linkedin.com/in/abhigyaan-deep-7b3a9b278/"
-            size="4"
-            target="_blank"
-          >
-            <Flex align="center" gap="2">
-              <GitHubLogoIcon width="1em" height="1em" />
-              GitHub
-            </Flex>
-          </Link>
-        </Flex>
+          <Flex gap="4">
+            <Link href="#journey" size="4">
+              Journey
+            </Link>
 
-        <Separator orientation="vertical" />
+            <Text color="gray">•</Text>
 
-        <Flex gap="4">
-          <Link href="#journey" size="4">
-            Journey
-          </Link>
+            <Link href="#education" size="4">
+              Education
+            </Link>
 
-          <Text color="gray">•</Text>
+            <Text color="gray">•</Text>
 
-          <Link href="#education" size="4">
-            Education
-          </Link>
-
-          <Text color="gray">•</Text>
-
-          <Link href="#projects" size="4">
-            Projects
-          </Link>
+            <Link href="#projects" size="4">
+              Projects
+            </Link>
+          </Flex>
         </Flex>
       </Flex>
     </Section>

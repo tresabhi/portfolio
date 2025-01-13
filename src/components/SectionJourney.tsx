@@ -22,31 +22,14 @@ export function SectionJourney() {
           Watching scientists juggle colorful chemicals fascinated me as a
           child, but Mechanix, a toy of bolts and beams, shifted my focus to
           engineering. Building helicopters and battle-bots sparked my
-          creativity, and STS-135 ignited my passion for flight. This love for
-          rockets and airplanes continued strong through my childhood, even when
-          faced with missions that would've been better scrubbed:
+          creativity. And the launch of the STS-135 finally ignited my passion
+          for flight. This love for aerospace continued strong through my
+          childhood, even when faced with missions that didn't quite seem to go
+          nominally...
         </Text>
       </Flex>
 
       <ASPDoodle />
-
-      <Flex direction="column" gap="3">
-        <Heading>My curiosity didn't start easy</Heading>
-
-        <Flex direction="column" gap="2">
-          <Text>
-            Abhi's Space Programs (ASP for short) marked my first venture into
-            propulsion, armed with zero formal knowledge of rocketry—or safety,
-            for that matter.
-          </Text>
-          <Text>
-            With aluminum foil bodies and solid motor fuel from sparklers and
-            candle wax, these rockets were truly the pinnacle of childhood
-            engineering! For inexplicable reasons, however, nearly every launch
-            followed the same familiar sequence:
-          </Text>
-        </Flex>
-      </Flex>
     </Section>
   );
 }
