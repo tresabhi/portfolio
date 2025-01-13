@@ -1,3 +1,4 @@
+import { mauveDark } from "@radix-ui/colors";
 import { Box } from "@radix-ui/themes";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { Suspense, useMemo, useRef } from "react";
@@ -15,7 +16,7 @@ import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import { useOnScreen } from "../hooks/useOnScreen";
 
 const near0 = 1;
-const near1 = 7;
+const near1 = 7.5;
 const far0 = near1;
 const far1 = 10;
 
@@ -34,7 +35,7 @@ export function Engine() {
             position: new Vector3(5, 5, -8).multiplyScalar(0.7),
           }}
           scene={{
-            fog: new Fog(0x111113, near0, far0),
+            fog: new Fog(mauveDark.mauve1, near0, far0),
           }}
         >
           <Suspense fallback={null}>
@@ -64,7 +65,7 @@ function FogManager() {
 }
 
 const outlineMaterial = new LineBasicMaterial({
-  color: 0x454545,
+  color: 0x424242,
   linewidth: 190,
 });
 
@@ -77,8 +78,10 @@ function Model() {
       if (child instanceof Mesh) {
         child.renderOrder = -1;
         child.material = new MeshBasicMaterial({
+          color: 0x757575,
           depthWrite: true,
-          colorWrite: false,
+          transparent: true,
+          opacity: 2 ** -3,
         });
 
         return;
@@ -114,7 +117,7 @@ function Model() {
   });
 
   return (
-    <group ref={wrapper} position={[2.3, 0, 0]}>
+    <group ref={wrapper} position={[1.9, 0, 0]}>
       <primitive object={scene} />
     </group>
   );

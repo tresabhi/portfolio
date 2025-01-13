@@ -37,8 +37,8 @@ export function SectionIntro() {
           <Box
             flexGrow="0"
             overflow="hidden"
-            width="15rem"
-            height="15rem"
+            width="17rem"
+            height="17rem"
             style={{
               backgroundImage: `url(${imgur("FEx150k", { format: "jpeg" })})`,
               backgroundSize: "cover",
