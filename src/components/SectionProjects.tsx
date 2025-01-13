@@ -9,8 +9,6 @@ const lorem =
 export function SectionProjects() {
   return (
     <>
-      <Separator size="4" />
-
       <Section id="projects">
         <Heading size="7" align="center">
           Key Projects
