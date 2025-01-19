@@ -10,14 +10,15 @@ export function Page() {
     <BaseTheme>
       <Flex
         justify="center"
-        style={{ background: "var(--gray-3)" }}
         minHeight="100vh"
+        style={{ background: "var(--gray-1)" }}
+        py="9"
       >
         <Flex
           direction="column"
           flexGrow="1"
           maxWidth="80rem"
-          style={{ background: "var(--gray-1)", boxShadow: "var(--shadow-3)" }}
+          style={{ background: "var(--gray-3)" }}
         >
           <SectionIntro />
           <SectionJourney />

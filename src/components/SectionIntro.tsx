@@ -12,7 +12,10 @@ export function SectionIntro() {
   return (
     <Section
       appearance="dark"
-      style={{ position: "relative", overflow: "clip" }}
+      style={{
+        position: "relative",
+        overflow: "clip",
+      }}
     >
       <Engine />
 
@@ -27,7 +30,11 @@ export function SectionIntro() {
               }}
             >
               Hi, I'm <Text weight="bold">Abhi</Text>—an{" "}
-              <Text weight="bold" color="red">
+              <Text
+                weight="bold"
+                color="red"
+                style={{ color: "var(--accent-10)" }}
+              >
                 Aerospace Engineer
               </Text>{" "}
               driven by an insatiable curiosity and a passion for turning
@@ -68,7 +75,12 @@ export function SectionIntro() {
 
         <Flex justify="between" align="center" position="relative">
           <Flex gap="4">
-            <Link href="mailto:abhigyaan457@gmail.com" size="4" target="_blank">
+            <Link
+              href="mailto:abhigyaan457@gmail.com"
+              size="4"
+              target="_blank"
+              style={{ color: "var(--accent-10)" }}
+            >
               <Flex align="center" gap="2">
                 <EnvelopeClosedIcon width="1em" height="1em" />
                 Gmail
@@ -81,6 +93,7 @@ export function SectionIntro() {
               href="https://www.linkedin.com/in/abhigyaan-deep-7b3a9b278/"
               size="4"
               target="_blank"
+              style={{ color: "var(--accent-10)" }}
             >
               <Flex align="center" gap="2">
                 <LinkedInLogoIcon width="1em" height="1em" />
@@ -91,9 +104,10 @@ export function SectionIntro() {
             <Text color="gray">•</Text>
 
             <Link
-              href="https://www.linkedin.com/in/abhigyaan-deep-7b3a9b278/"
+              href="https://github.com/tresabhi"
               size="4"
               target="_blank"
+              style={{ color: "var(--accent-10)" }}
             >
               <Flex align="center" gap="2">
                 <GitHubLogoIcon width="1em" height="1em" />
@@ -103,20 +117,43 @@ export function SectionIntro() {
           </Flex>
 
           <Flex gap="4">
-            <Link href="#journey" size="4">
+            <Link
+              href="#journey"
+              size="4"
+              style={{ color: "var(--accent-10)" }}
+            >
               Journey
             </Link>
 
             <Text color="gray">•</Text>
 
-            <Link href="#education" size="4">
+            <Link
+              href="#education"
+              size="4"
+              style={{ color: "var(--accent-10)" }}
+            >
               Education
             </Link>
 
             <Text color="gray">•</Text>
 
-            <Link href="#projects" size="4">
+            <Link
+              href="#projects"
+              size="4"
+              style={{ color: "var(--accent-10)" }}
+            >
               Projects
+            </Link>
+
+            <Text color="gray">•</Text>
+
+            <Link
+              href="#"
+              target="_blank"
+              size="4"
+              style={{ color: "var(--accent-10)" }}
+            >
+              Résumé
             </Link>
           </Flex>
         </Flex>

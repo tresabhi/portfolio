@@ -24,7 +24,7 @@ export function SectionEducation() {
   return (
     <Section id="education" appearance="dark">
       <Flex justify="center">
-        <Heading size="7">Education</Heading>
+        <Heading size="8">Education</Heading>
       </Flex>
 
       <Flex justify="between">
@@ -36,12 +36,14 @@ export function SectionEducation() {
           align="center"
           width="fit-content"
         >
-          <Text color="red" highContrast>
+          <Text color="red" style={{ color: "var(--accent-10)" }}>
             <RocketDoodle width="10rem" height="10rem" />
           </Text>
 
           <Flex align="center" gap="3">
-            <Heading color="red">Aerospace Engineering</Heading>
+            <Heading color="red" style={{ color: "var(--accent-10)" }}>
+              Aerospace Engineering
+            </Heading>
             <Badge color="gray">2023 - 2027</Badge>
           </Flex>
 
@@ -56,6 +58,7 @@ export function SectionEducation() {
                 target="_blank"
                 underline="always"
                 color="red"
+                style={{ color: "var(--accent-10)" }}
               >
                 combustion chambers
               </Link>{" "}
@@ -65,10 +68,10 @@ export function SectionEducation() {
                 target="_blank"
                 underline="always"
                 color="red"
+                style={{ color: "var(--accent-10)" }}
               >
-                avionics
+                avionics.
               </Link>
-              .
             </Text>
           </Box>
         </Flex>
@@ -81,7 +84,7 @@ export function SectionEducation() {
           align="center"
           width="fit-content"
         >
-          <Text color="jade" highContrast>
+          <Text color="jade">
             <TowerDoodle width="10rem" height="10rem" />
           </Text>
 
@@ -120,47 +123,41 @@ export function SectionEducation() {
                 underline="always"
                 color="jade"
               >
-                embedded systems
+                embedded systems.
               </Link>
-              .
             </Text>
           </Box>
         </Flex>
       </Flex>
 
-      <Flex justify="center">
-        <Separator size="3" />
+      <Flex justify="center" px="8">
+        <Separator size="4" />
       </Flex>
 
       <Flex direction="column" gap="9">
         <Flex gap="8" align="center" justify="center" py="2">
-          <Text color="red" highContrast>
+          <Text color="red" style={{ color: "var(--accent-10)" }}>
             <SpaceShuttleDoodle width="8rem" height="8rem" />
           </Text>
 
           <Flex direction="column" gap="2">
-            <Heading size="5" color="red">
+            <Heading size="5" color="red" style={{ color: "var(--accent-10)" }}>
               Why Aerospace?
             </Heading>
 
-            <Text
-              color="gray"
-              highContrast
-              size="4"
-              style={{ maxWidth: "40rem" }}
-              wrap="pretty"
-            >
-              STS-135 sparked my fascination with flying machines at seven years
-              old. Today, at {age}, I'm still amazed by its complexity. This
-              technological marvel is unquestionably something I wanted to be a
-              part of. This enduring passion for rockets and airplanes led me to
-              pursue Aerospace Engineering.
+            <Text style={{ maxWidth: "40rem" }} wrap="pretty">
+              STS-135 (the last Space Shuttle) sparked my fascination with
+              flying machines at seven years old. Today, at {age}, I'm still
+              amazed by its complexity. This technological marvel is
+              unquestionably something I wanted to be a part of. This enduring
+              passion for rockets and airplanes led me to pursue Aerospace
+              Engineering.
             </Text>
           </Flex>
         </Flex>
 
         <Flex gap="8" align="center" justify="center" py="2">
-          <Text color="jade" highContrast>
+          <Text color="jade">
             <PerseveranceDoodle width="8rem" height="8rem" />
           </Text>
 
@@ -169,13 +166,7 @@ export function SectionEducation() {
               Why C-P Systems?
             </Heading>
 
-            <Text
-              color="gray"
-              highContrast
-              size="4"
-              style={{ maxWidth: "40rem" }}
-              wrap="pretty"
-            >
+            <Text style={{ maxWidth: "40rem" }} wrap="pretty">
               I love creating robots, simulations, and websites like this one!
               The ability to transform abstractions into functional, visual
               realities within seconds is fascinating. It feels natural to

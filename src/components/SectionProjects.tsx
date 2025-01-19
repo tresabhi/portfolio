@@ -10,7 +10,7 @@ export function SectionProjects() {
   return (
     <>
       <Section id="projects">
-        <Heading size="7" align="center">
+        <Heading size="8" align="center">
           Key Projects
         </Heading>
 
@@ -123,7 +123,8 @@ export function SectionProjects() {
             With maximum efficiency as a goal, the trays and fuselage I designed
             allow for minimal time on the tarmac thanks to the fact that tray
             was designed to be easily manufacturable by anyone so that it comes
-            in loaded with drives when loading them into the drone.
+            in loaded with drives when loading them into the drone.{" "}
+            <Link weight="bold">Read more...</Link>
           </Text>
         </Project>
       </Section>
@@ -131,7 +132,7 @@ export function SectionProjects() {
       <Separator size="4" />
 
       <Section>
-        <Heading size="7" align="center">
+        <Heading size="8" align="center">
           Other Projects
         </Heading>
 
