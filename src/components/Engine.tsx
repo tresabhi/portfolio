@@ -15,9 +15,9 @@ import {
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import { useOnScreen } from "../hooks/useOnScreen";
 
-const near0 = 1;
+const near0 = 2;
 const near1 = 7.5;
-const far0 = near1;
+const far0 = 4.125;
 const far1 = 10;
 
 export function Engine() {
