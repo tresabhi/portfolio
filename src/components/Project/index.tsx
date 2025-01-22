@@ -10,7 +10,7 @@ import {
   Text,
 } from "@radix-ui/themes";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { imgur } from "../../core/imgur";
+import { imgur, ImgurSize } from "../../core/imgur";
 import { BM } from "../BM";
 import { TimelineProjectType as ProjectType } from "./constants";
 
@@ -127,7 +127,11 @@ export function Project({
                 <Box
                   style={{
                     backgroundImage: `url(${imgur(
-                      images ? images[imageIndex] : video!.image
+                      images ? images[imageIndex] : video!.image,
+                      {
+                        format: "jpeg",
+                        size: ImgurSize.LargeThumbnail,
+                      }
                     )})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
