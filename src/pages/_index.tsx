@@ -18,7 +18,11 @@ export function Page() {
           direction="column"
           flexGrow="1"
           maxWidth="80rem"
-          style={{ background: "var(--gray-3)" }}
+          style={{
+            background: "var(--gray-3)",
+            borderRadius: "var(--radius-1)",
+            overflow: "hidden",
+          }}
         >
           <SectionIntro />
           <SectionJourney />
