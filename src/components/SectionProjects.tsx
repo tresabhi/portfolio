@@ -1,4 +1,5 @@
 import { Heading, Link, Separator, Text } from "@radix-ui/themes";
+import { BM } from "./BM";
 import { Project } from "./Project";
 import { TimelineProjectType } from "./Project/constants";
 import { Section } from "./Section";
@@ -17,7 +18,6 @@ export function SectionProjects() {
         <Project
           title="J.E.T. - Advanced Manufacturing"
           type={TimelineProjectType.Club}
-          time="2024 - present"
           images={["dFofBwn", "3Wo1TaL"]}
           skills={[
             "Advanced Thermodynamics",
@@ -27,24 +27,79 @@ export function SectionProjects() {
           ]}
         >
           <Text>
-            I am responsible for creating the heart of our jet engine as the
-            lead designer for the combustion chamber of J.E.T. (Jet Engine Team,
-            a humorously unexacting name I coined under the Advanced
-            Manufacturing Club).
+            I am <BM>designing</BM> and <BM>manufacturing</BM> the heart of our
+            jet engine: the combustion chamber. Crafted from rolled stainless
+            steel sheet metal, its dimensions and geometry balance thermal
+            limits, performance requirements, and efficiency.
           </Text>
+
           <Text>
-            This project draws knowledge beyond my current coursework; hence, I
-            primarily rely on independent research. I am honing the combustion
-            chamber to achieve optimal stoichiometric combustion at a precise
-            ratio. My design focuses on ease of manufacturing while maintaining
-            maximum efficiency to lower emissions.
+            As a member of J.E.T. ("Jet Engine Team"—a humorously unexacting
+            name I proudly coined), I frequently go beyond my current
+            coursework. I <BM>independently research</BM>, implement new ideas,
+            run simulations, and effectively communicate changes with my team to
+            refine our designs.
+          </Text>
+
+          <Text>
+            For guidance, I've been referring to Combustion Engineering by
+            Ragland and Bryden to understand thermodynamics and establish the
+            basic geometry of the engine. The combustion chamber consists of two
+            concentric components: the combustor and the liner. The combustor
+            sustains the flame, while the liner is precisely designed to allow
+            airflow that ensures stoichiometric reactions and cools the
+            combustion products.
+          </Text>
+
+          <Text>
+            The liner is a simple rolled aluminum cylinder with a 6-inch
+            diameter. The combustor, on the other hand, is more intricate. It
+            begins as a truncated stainless steel cone, with its mouth carefully
+            sized to direct approximately 83% of the incoming air into the
+            liner, leaving the rest for the combustor. At the base of the cone,
+            fuel injectors initiate the flame, which is sustained in the next
+            segment of the combustor.
+          </Text>
+
+          <Text>
+            The combustor transitions from the truncated cone into a cylindrical
+            shape featuring a series of carefully positioned holes. These holes
+            are categorized into three groups, following the direction of
+            airflow:
+          </Text>
+
+          <Text>
+            <ol>
+              <li>
+                <BM>Primary Holes</BM>: Sixteen holes consume about 20% of the
+                airflow, sustaining the flame.
+              </li>
+
+              <li>
+                <BM>Intermediate Holes</BM>: Twelve holes use 30% of the airflow
+                to combust any remaining fuel and slightly cool the products.
+              </li>
+
+              <li>
+                <BM>Dilution Holes</BM>: Eight holes consume the remaining
+                airflow, cooling the products further to protect downstream
+                aluminum components.
+              </li>
+            </ol>
+          </Text>
+
+          <Text>
+            The geometry is dynamic, with dimensions adjusted daily based on
+            ongoing calculations and simulations. We've developed a{" "}
+            <BM>Python</BM> script using the Pint library to streamline this
+            process to ensure unit consistency. Numerous variables are optimized
+            to achieve our goal of producing 25 pounds of thrust.
           </Text>
         </Project>
 
         <Project
           title="Nerdy Birds"
           type={TimelineProjectType.Club}
-          time="2019 - 2023"
           video={{
             image: "TcC9m7e",
             youtube: "mjuX8Oxbl0k",
@@ -108,7 +163,6 @@ export function SectionProjects() {
         <Project
           title="Cloud Surfers"
           type={TimelineProjectType.Educational}
-          time="2024"
           images={["vFL12f7", "hlfxY5G"]}
           skills={["SolidWorks", "MATLAB"]}
         >
@@ -139,7 +193,6 @@ export function SectionProjects() {
         <Project
           title="BlitzKit"
           type={TimelineProjectType.Hobby}
-          time="2022 - present"
           skills={["TypeScript", "C++", "C#", "WebGL"]}
         >
           {lorem}
@@ -148,7 +201,6 @@ export function SectionProjects() {
         <Project
           title="Stellar"
           type={TimelineProjectType.Hobby}
-          time="2021 - 2024"
           images={["8z390aL", "Mgqhi9N"]}
           skills={["TypeScript"]}
         >
@@ -161,7 +213,6 @@ export function SectionProjects() {
         <Project
           title="Avionics in Rocketry Club"
           type={TimelineProjectType.Club}
-          time="2023"
           skills={["Cyber-Physical Integration", "C++", "Flutter"]}
         >
           {lorem}
@@ -170,7 +221,6 @@ export function SectionProjects() {
         <Project
           title="F-4 Phantom II Digitalization"
           type={TimelineProjectType.Educational}
-          time="2023"
           skills={["SolidWorks"]}
         >
           {lorem}
