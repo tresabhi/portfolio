@@ -113,50 +113,51 @@ export function SectionProjects() {
           ]}
         >
           <Text>
-            As the team captain for 2023 and programmer for the Nerdy Birds{" "}
-            <Link
-              target="_blank"
-              href="https://www.firstinspires.org/robotics/ftc"
-            >
-              FTC team
-            </Link>
-            , I led us to a decisive first-place victory at districts—our best
-            performance in the team's 10-year history—and a strong finish at
-            states.
+            I served as the <BM>team lead</BM> during the 2022-2023 season,
+            taking on additional responsibilities in programming while actively
+            contributing to the design and manufacturing of our robot. Designed
+            for the FTC Robotics Competition, the B-4/B-5 represented our
+            flagship innovation—a culmination of advanced technologies I
+            developed. This effort led us to secure first place at districts and
+            rank among the top third of teams at the state level, marking the
+            best performance in our team's 10-year history.
           </Text>
           <Text>
-            With no prior guidance or existing solutions, I took the initiative
-            to research and implement advanced technologies for our robot's
-            autonomous mode. I mastered{" "}
-            <Link
-              target="_blank"
-              href="https://en.wikipedia.org/wiki/Computer_visions"
-            >
-              computer vision
-            </Link>
-            ,{" "}
-            <Link
-              target="_blank"
-              href="https://en.wikipedia.org/wiki/Pathfinding"
-            >
-              pathfinding
-            </Link>
-            ,{" "}
-            <Link
-              target="_blank"
-              href="https://en.wikipedia.org/wiki/Inertial_navigation_system"
-            >
-              inertial navigation
-            </Link>
-            , and{" "}
-            <Link
-              target="_blank"
-              href="https://en.wikipedia.org/wiki/Mecanum_wheel"
-            >
-              mecanum omnidirectional traversal
-            </Link>
-            , pushing both my high school knowledge and the boundaries of what's
-            possible in FTC.
+            The most impressive feature of our robot was the novel autonomous
+            mode I designed, which surpassed anything we had seen in FTC to
+            date. Operating within the competition's tight 30-second autonomous
+            period, the system used cutting-edge sensors and software to execute
+            tasks precisely. The robot utilized computer vision to identify
+            obstacles, dynamically adapting its behavior based on gameplay
+            elements.
+          </Text>
+          <Text>
+            At the core of this innovation was a{" "}
+            <BM>guided A* pathfinding system</BM>. It integrated manual route
+            inputs with real-time decisions to guide the robot to scoring
+            elements efficiently, ensuring precise alignment and placement on
+            goals. Additionally, I incorporated color and brightness sensors to
+            recognize floor patterns and infer positional hints. At the same
+            time, the onboard IMU tracked accelerations and forces to maintain
+            an accurate understanding of the robot's orientation and position.
+            Periodic ground-based position checks further refined its spatial
+            awareness.
+          </Text>
+          <Text>
+            I also introduced "<BM>driver-relative controls</BM>,"
+            revolutionizing how the robot responded to operator inputs. This
+            system, enabled by mecanum wheels, advanced mathematics, and robust
+            programming, decoupled the robot's movement from its local
+            orientation. Regardless of its rotation or position, the robot moved
+            relative to the playing field, allowing drivers to intuitively
+            command strafing, backward movement, and more from their
+            perspective.
+          </Text>
+          <Text>
+            This integration of autonomous functionality and driver-friendly
+            controls transformed our robot into a high-performing machine with
+            innovative features. These advancements were instrumental in
+            achieving our historic success during the competition.
           </Text>
         </Project>
 
