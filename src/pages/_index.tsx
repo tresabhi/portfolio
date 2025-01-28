@@ -20,8 +20,6 @@ export function Page() {
           maxWidth="80rem"
           style={{
             background: "var(--gray-3)",
-            borderRadius: "var(--radius-1)",
-            overflow: "hidden",
           }}
         >
           <SectionIntro />
