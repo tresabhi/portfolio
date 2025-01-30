@@ -1,4 +1,4 @@
-import { Heading, Link, Separator, Text } from "@radix-ui/themes";
+import { Heading, Separator, Text } from "@radix-ui/themes";
 import { BM } from "./BM";
 import { Project } from "./Project";
 import { TimelineProjectType } from "./Project/constants";
@@ -164,22 +164,48 @@ export function SectionProjects() {
         <Project
           title="Cloud Surfers"
           type={TimelineProjectType.Educational}
-          images={["vFL12f7", "hlfxY5G"]}
+          images={["EVLAcj4", "n6ku0PT"]}
           skills={["SolidWorks", "MATLAB"]}
         >
           <Text>
-            Scientific data often reaches multiple petabytes in size (millions
-            of gigabytes!) and it's easier to fly it over physically than
-            transmit it, saving months of wait time. I designed the fuselage and
-            the trays that hold the hard drives all with ease of production in
-            mind.
+            Scientific data can be massive—often spanning multiple petabytes.
+            For perspective, 1PB equals <BM>1,000,000 gigabytes</BM>. Projects
+            like the first image of the Milky Way's black hole required over 5PB
+            of data. Transferring such volumes over the internet or even
+            high-speed cables is slow; in the black hole project's case, it took
+            two months. In fact, physically transporting hard drives by air is
+            often faster than digital transfer.
           </Text>
           <Text>
-            With maximum efficiency as a goal, the trays and fuselage I designed
-            allow for minimal time on the tarmac thanks to the fact that tray
-            was designed to be easily manufacturable by anyone so that it comes
-            in loaded with drives when loading them into the drone.{" "}
-            <Link weight="bold">Read more...</Link>
+            Cloud Surfers was my solution to this problem, which our team
+            further developed. The Cloud Surfers drone is designed to carry four
+            trays, each holding up to <BM>40 HDDs</BM> (hard disk drives),
+            providing a total storage capacity of approximately 5.2PB—perfect
+            for transporting data-intensive projects like black hole images.
+          </Text>
+          <Text>
+            The fully autonomous drone features easily manufacturable trays
+            designed for rapid deployment at universities, labs, and research
+            centers. Instead of slotting in each hard drive individually, users
+            can quickly load full trays directly into the fuselage, minimizing
+            downtime.
+          </Text>
+          <Text>
+            For performance, we selected the <BM>Roncz Low Drag airfoil</BM> for
+            the main wings, the <BM>NACA 0012 airfoil</BM> for the vertical and
+            horizontal stabilizers, and the <BM>Rotax 914 engine</BM> for
+            propulsion. This configuration allows the drone to carry{" "}
+            <BM>160kg of HDDs</BM> and <BM>376kg of fuel</BM>, achieving a
+            trans-European flight <BM>range of 3,229km</BM>, exceeding our
+            3,000km target. For perspective, this range is nearly equivalent to
+            a flight from Salt Lake City, Utah, to New York.
+          </Text>
+          <Text>
+            I led the <BM>CAD</BM> modeling, established{" "}
+            <BM>design requirements</BM>, and ensured compliance with both{" "}
+            <BM>federal and international regulations</BM>, shaping Cloud
+            Surfers into a feasible and impactful solution for high-volume data
+            transport.
           </Text>
         </Project>
       </Section>
