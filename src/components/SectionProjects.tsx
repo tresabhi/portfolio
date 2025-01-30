@@ -221,8 +221,62 @@ export function SectionProjects() {
           title="BlitzKit"
           type={TimelineProjectType.Hobby}
           skills={["TypeScript", "C++", "C#", "WebGL"]}
+          images={["yVssfpC", "6x2hsgZ"]}
         >
-          {lorem}
+          <Text>
+            BlitzKit is a passion project of mine that documents the armor
+            profiles, ammunition, and statistics of around 700 tanks spanning
+            from World War I to the Cold War. Originally a hobby, I never
+            expected it to involve aerospace engineering concepts—let alone
+            reach half a million monthly views.
+          </Text>
+          <Text>
+            The flagship feature of BlitzKit is its{" "}
+            <BM>dynamic armor profile</BM>, a <BM>real-time</BM> rendering
+            system that simulates how shells interact with armor from any given
+            angle and position. This GLSL-based OpenGL renderer models shell
+            penetration behavior in real-time, an incredibly complex problem
+            requiring research into <BM>fluid dynamics</BM> and shell{" "}
+            <BM>impact heuristics</BM>.
+          </Text>
+          <Text>
+            BlitzKit accounts for two types of armor:
+            <ol>
+              <li>
+                <BM>Spaced armor</BM>: Layers of armor with air gaps between
+                them, highly effective against explosive shells.
+              </li>
+              <li>
+                <BM>Primary armor</BM>: The final, typically thickest layer that
+                protects the crew compartment.
+              </li>
+            </ol>
+          </Text>
+          <Text>
+            The site also simulates three primary shell types:
+            <ol>
+              <li>
+                <BM>Kinetic shells</BM> (AP, APCR): Delivers a concentrated
+                energy impact to penetrate armor.
+              </li>
+              <li>
+                <BM>Explosive shells</BM> (HE, HESH): Relies on detonation and
+                thin armor to cause internal damage or spalling.
+              </li>
+              <li>
+                <BM>HEAT shells</BM>: Uses a shaped charge jet of molten metal
+                to penetrate thick armor but vulnerable to spaced armor and
+                external modules.
+              </li>
+            </ol>
+          </Text>
+          <Text>
+            With endless combinations of armor types, angles, shell
+            configurations, and impact conditions, BlitzKit provides an engaging
+            and technically rich real-time simulation—bringing tank combat
+            mechanics to life in a way that's both visually and analytically
+            compelling.
+          </Text>
         </Project>
 
         <Project
