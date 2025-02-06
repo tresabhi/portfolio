@@ -1,9 +1,10 @@
 import {
+  CopyIcon,
   EnvelopeClosedIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { Box, Flex, Link, Text } from "@radix-ui/themes";
+import { Box, Flex, IconButton, Link, Popover, Text } from "@radix-ui/themes";
 import { imgur } from "../core/imgur";
 import { Engine } from "./Engine";
 import { Section } from "./Section";
@@ -75,17 +76,39 @@ export function SectionIntro() {
 
         <Flex justify="between" align="center" position="relative">
           <Flex gap="4">
-            <Link
-              href="mailto:abhigyaan457@gmail.com"
-              size="4"
-              target="_blank"
-              style={{ color: "var(--accent-10)" }}
-            >
-              <Flex align="center" gap="2">
-                <EnvelopeClosedIcon width="1em" height="1em" />
-                Gmail
-              </Flex>
-            </Link>
+            <Popover.Root>
+              <Popover.Trigger>
+                <Link
+                  href="mailto:abhigyaan457@gmail.com"
+                  size="4"
+                  style={{ color: "var(--accent-10)" }}
+                >
+                  <Flex align="center" gap="2">
+                    <EnvelopeClosedIcon width="1em" height="1em" />
+                    Gmail
+                  </Flex>
+                </Link>
+              </Popover.Trigger>
+
+              <Popover.Content size="1">
+                <Flex align="center" gap="2">
+                  <Text>
+                    E-mail app didn't open? Mail to abhigyaan457@gmail.com{" "}
+                  </Text>
+
+                  <Popover.Close>
+                    <IconButton
+                      variant="ghost"
+                      onClick={() => {
+                        navigator.clipboard.writeText("abhigyaan457@gmail.com");
+                      }}
+                    >
+                      <CopyIcon />
+                    </IconButton>
+                  </Popover.Close>
+                </Flex>
+              </Popover.Content>
+            </Popover.Root>
 
             <Text color="gray">•</Text>
 
