@@ -171,7 +171,7 @@ export function SectionIntro() {
             <Text color="gray">•</Text>
 
             <Link
-              href="#"
+              href="/resume.pdf"
               target="_blank"
               size="4"
               style={{ color: "var(--accent-10)" }}
