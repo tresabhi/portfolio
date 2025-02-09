@@ -3,6 +3,7 @@ import { BaseTheme } from "../components/BaseTheme";
 import { SectionEducation } from "../components/SectionEducation";
 import { SectionIntro } from "../components/SectionIntro";
 import { SectionJourney } from "../components/SectionJourney";
+import { SectionProjects } from "../components/SectionProjects";
 
 export function Page() {
   return (
@@ -25,7 +26,7 @@ export function Page() {
           <SectionIntro />
           <SectionJourney />
           <SectionEducation />
-          {/* <SectionProjects /> */}
+          <SectionProjects />
         </Flex>
       </Flex>
     </BaseTheme>

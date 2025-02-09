@@ -7,6 +7,7 @@ import {
   IconButton,
   Link,
   SegmentedControl,
+  Separator,
   Text,
 } from "@radix-ui/themes";
 import { useEffect, useRef, useState, type ReactNode } from "react";
@@ -47,18 +48,30 @@ export function Project({
   }, [cycle]);
 
   return (
-    <Flex gap="6">
-      <Flex ml="9" direction="column" gap="4" flexGrow="1" flexBasis="0">
-        <Flex direction="column">
-          <Flex align="center" gap="3">
-            <Heading>{title}</Heading>
+    <Flex gap="6" direction={{ initial: "column-reverse", sm: "row" }}>
+      <Flex justify="center">
+        <Separator size="4" />
+      </Flex>
 
-            {type === ProjectType.Educational && (
-              <Badge color="amber">Educational</Badge>
-            )}
-            {type === ProjectType.Club && <Badge color="green">Club</Badge>}
-            {type === ProjectType.Hobby && <Badge color="pink">Hobby</Badge>}
-          </Flex>
+      <Flex
+        direction="column"
+        gap="4"
+        flexGrow="1"
+        flexBasis="0"
+        minHeight={expanded ? undefined : { initial: "20rem", sm: "auto" }}
+      >
+        <Flex
+          align="center"
+          gap="3"
+          justify={{ initial: "center", sm: "start" }}
+        >
+          <Heading>{title}</Heading>
+
+          {type === ProjectType.Educational && (
+            <Badge color="amber">Educational</Badge>
+          )}
+          {type === ProjectType.Club && <Badge color="green">Club</Badge>}
+          {type === ProjectType.Hobby && <Badge color="pink">Hobby</Badge>}
         </Flex>
 
         {skills !== undefined && (

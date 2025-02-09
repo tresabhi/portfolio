@@ -1,4 +1,4 @@
-import { Heading, Separator, Text } from "@radix-ui/themes";
+import { Heading, Text } from "@radix-ui/themes";
 import { BM } from "./BM";
 import { Project } from "./Project";
 import { TimelineProjectType } from "./Project/constants";
@@ -10,7 +10,7 @@ const lorem =
 export function SectionProjects() {
   return (
     <>
-      <Section id="projects">
+      <Section id="projects" gap="9">
         <Heading size="8" align="center">
           Key Projects
         </Heading>
@@ -210,9 +210,7 @@ export function SectionProjects() {
         </Project>
       </Section>
 
-      <Separator size="4" />
-
-      <Section>
+      <Section gap="9">
         <Heading size="8" align="center">
           Other Projects
         </Heading>
