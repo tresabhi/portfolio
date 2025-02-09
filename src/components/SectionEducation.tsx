@@ -11,7 +11,7 @@ import { wiki } from "../core/wiki";
 import { PerseveranceDoodle } from "./Doodles/Perseverance";
 import { RocketDoodle } from "./Doodles/Rocket";
 import { SpaceShuttleDoodle } from "./Doodles/SpaceShuttle";
-import { TowerDoodle } from "./Doodles/Tower";
+import { TowerDoodle, TowerDoodleNoSignal } from "./Doodles/Tower";
 import { Section } from "./Section";
 
 const BIRTH = new Date(2005, 3, 7);
@@ -27,7 +27,12 @@ export function SectionEducation() {
         <Heading size="8">Education</Heading>
       </Flex>
 
-      <Flex justify="between">
+      <Flex
+        justify="between"
+        gap={{ initial: "9", md: "6" }}
+        direction={{ initial: "column", md: "row" }}
+        align="center"
+      >
         <Flex
           direction="column"
           gap="3"
@@ -40,7 +45,11 @@ export function SectionEducation() {
             <RocketDoodle width="10rem" height="10rem" />
           </Text>
 
-          <Flex align="center" gap="3">
+          <Flex
+            align="center"
+            gap="3"
+            direction={{ initial: "column-reverse", md: "row" }}
+          >
             <Heading color="red" style={{ color: "var(--accent-10)" }}>
               Aerospace Engineering
             </Heading>
@@ -85,10 +94,19 @@ export function SectionEducation() {
           width="fit-content"
         >
           <Text color="jade">
-            <TowerDoodle width="10rem" height="10rem" />
+            <Box display={{ initial: "none", md: "block" }}>
+              <TowerDoodle width="10rem" height="10rem" />
+            </Box>
+            <Box display={{ initial: "block", md: "none" }}>
+              <TowerDoodleNoSignal width="10rem" height="10rem" />
+            </Box>
           </Text>
 
-          <Flex align="center" gap="3">
+          <Flex
+            align="center"
+            gap="3"
+            direction={{ initial: "column-reverse", md: "row" }}
+          >
             <Heading color="jade">Cyber Physical Systems</Heading>
             <Badge color="gray">2025 - 2027</Badge>
           </Flex>
@@ -135,12 +153,22 @@ export function SectionEducation() {
       </Flex>
 
       <Flex direction="column" gap="9">
-        <Flex gap="8" align="center" justify="center" py="2">
+        <Flex
+          gap={{ initial: "4", xs: "5", md: "8" }}
+          align="center"
+          justify="center"
+          py="2"
+          direction={{ initial: "column", xs: "row" }}
+        >
           <Text color="red" style={{ color: "var(--accent-10)" }}>
             <SpaceShuttleDoodle width="8rem" height="8rem" />
           </Text>
 
-          <Flex direction="column" gap="2">
+          <Flex
+            direction="column"
+            gap="2"
+            align={{ initial: "center", xs: "start" }}
+          >
             <Heading size="5" color="red" style={{ color: "var(--accent-10)" }}>
               Why Aerospace?
             </Heading>
@@ -156,12 +184,22 @@ export function SectionEducation() {
           </Flex>
         </Flex>
 
-        <Flex gap="8" align="center" justify="center" py="2">
+        <Flex
+          gap={{ initial: "4", xs: "5", md: "8" }}
+          align="center"
+          justify="center"
+          py="2"
+          direction={{ initial: "column", xs: "row" }}
+        >
           <Text color="jade">
             <PerseveranceDoodle width="8rem" height="8rem" />
           </Text>
 
-          <Flex direction="column" gap="2">
+          <Flex
+            direction="column"
+            gap="2"
+            align={{ initial: "center", xs: "start" }}
+          >
             <Heading size="5" color="jade">
               Why C-P Systems?
             </Heading>

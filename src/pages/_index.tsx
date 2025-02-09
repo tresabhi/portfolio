@@ -1,5 +1,6 @@
 import { Flex } from "@radix-ui/themes";
 import { BaseTheme } from "../components/BaseTheme";
+import { SectionEducation } from "../components/SectionEducation";
 import { SectionIntro } from "../components/SectionIntro";
 import { SectionJourney } from "../components/SectionJourney";
 
@@ -23,7 +24,7 @@ export function Page() {
         >
           <SectionIntro />
           <SectionJourney />
-          {/* <SectionEducation /> */}
+          <SectionEducation />
           {/* <SectionProjects /> */}
         </Flex>
       </Flex>
