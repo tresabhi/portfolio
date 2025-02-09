@@ -1,4 +1,4 @@
-import { Flex, Quote } from "@radix-ui/themes";
+import { Box, Flex, Quote } from "@radix-ui/themes";
 import type { SVGProps } from "react";
 
 export function ASPDoodle1(props: SVGProps<SVGSVGElement>) {
@@ -201,12 +201,32 @@ export function ASPDoodle() {
     <Flex direction="column" align="center" gap="3">
       <Flex wrap="wrap" gap="2" justify="center">
         <Flex gap="2" wrap="wrap" justify="center">
-          <ASPDoodle1 width="15rem" height="15rem" />
-          <ASPDoodle2 width="15rem" height="15rem" />
+          <Box
+            width={{ initial: "10rem", xs: "15rem" }}
+            height={{ initial: "10rem", xs: "15rem" }}
+          >
+            <ASPDoodle1 width="100%" height="100%" />
+          </Box>
+          <Box
+            width={{ initial: "10rem", xs: "15rem" }}
+            height={{ initial: "10rem", xs: "15rem" }}
+          >
+            <ASPDoodle2 width="100%" height="100%" />
+          </Box>
         </Flex>
         <Flex gap="2" wrap="wrap" justify="center">
-          <ASPDoodle3 width="15rem" height="15rem" />
-          <ASPDoodle4 width="15rem" height="15rem" />
+          <Box
+            width={{ initial: "10rem", xs: "15rem" }}
+            height={{ initial: "10rem", xs: "15rem" }}
+          >
+            <ASPDoodle3 width="100%" height="100%" />
+          </Box>
+          <Box
+            width={{ initial: "10rem", xs: "15rem" }}
+            height={{ initial: "10rem", xs: "15rem" }}
+          >
+            <ASPDoodle4 width="100%" height="100%" />
+          </Box>
         </Flex>
       </Flex>
 

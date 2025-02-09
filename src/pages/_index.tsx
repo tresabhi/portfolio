@@ -1,6 +1,7 @@
 import { Flex } from "@radix-ui/themes";
 import { BaseTheme } from "../components/BaseTheme";
 import { SectionIntro } from "../components/SectionIntro";
+import { SectionJourney } from "../components/SectionJourney";
 
 export function Page() {
   return (
@@ -17,10 +18,11 @@ export function Page() {
           maxWidth="80rem"
           style={{
             background: "var(--gray-3)",
+            boxShadow: "var(--shadow-3)",
           }}
         >
           <SectionIntro />
-          {/* <SectionJourney /> */}
+          <SectionJourney />
           {/* <SectionEducation /> */}
           {/* <SectionProjects /> */}
         </Flex>
