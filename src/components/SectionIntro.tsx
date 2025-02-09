@@ -7,6 +7,7 @@ import {
 import { Box, Flex, IconButton, Link, Popover, Text } from "@radix-ui/themes";
 import { imgur } from "../core/imgur";
 import { Engine } from "./Engine";
+import { IntroDot } from "./IntroDot";
 import { Section } from "./Section";
 
 export function SectionIntro() {
@@ -17,14 +18,28 @@ export function SectionIntro() {
         position: "relative",
         overflow: "clip",
       }}
+      minHeight={{ initial: "calc(100vh - 4rem)", md: "auto" }}
     >
       <Engine />
 
-      <Flex direction="column" flexGrow="1" gap="9" position="relative" px="9">
-        <Flex justify="between" gap="9" py="9">
+      <Flex
+        direction="column"
+        flexGrow="1"
+        gap={{ initial: "7", md: "9" }}
+        position="relative"
+        px={{ initial: "0", md: "9" }}
+        justify={{ initial: "center", md: "start" }}
+      >
+        <Flex
+          direction={{ initial: "column-reverse", md: "row" }}
+          justify="between"
+          gap={{ initial: "7", md: "9" }}
+          py={{ initial: "0", md: "9" }}
+          align={{ initial: "center", md: "start" }}
+        >
           <Flex flexGrow="1" flexBasis="0" maxWidth="38rem">
             <Text
-              size="5"
+              size={{ initial: "3", xs: "5" }}
               wrap="pretty"
               style={{
                 lineHeight: "1.8",
@@ -51,8 +66,8 @@ export function SectionIntro() {
           <Box
             flexGrow="0"
             overflow="hidden"
-            width="17rem"
-            height="17rem"
+            width={{ initial: "12rem", xs: "17rem" }}
+            height={{ initial: "12rem", xs: "17rem" }}
             style={{
               backgroundImage: `url(${imgur("FEx150k", { format: "jpeg" })})`,
               backgroundSize: "cover",
@@ -74,13 +89,24 @@ export function SectionIntro() {
           </Box>
         </Flex>
 
-        <Flex justify="between" align="center" position="relative">
-          <Flex gap="4">
+        <Flex
+          justify="between"
+          direction={{ initial: "column", md: "row" }}
+          gap={{ initial: "4", xs: "2", md: "0" }}
+          align="center"
+          position="relative"
+        >
+          <Flex
+            gap={{ initial: "5", xs: "4" }}
+            wrap="wrap"
+            gapY="0"
+            justify="center"
+          >
             <Popover.Root>
               <Popover.Trigger>
                 <Link
                   href="mailto:abhigyaan457@gmail.com"
-                  size="4"
+                  size={{ initial: "3", sm: "4" }}
                   style={{ color: "var(--accent-10)" }}
                 >
                   <Flex align="center" gap="2">
@@ -110,11 +136,11 @@ export function SectionIntro() {
               </Popover.Content>
             </Popover.Root>
 
-            <Text color="gray">•</Text>
+            <IntroDot />
 
             <Link
               href="https://www.linkedin.com/in/abhigyaan-deep-7b3a9b278/"
-              size="4"
+              size={{ initial: "3", sm: "4" }}
               target="_blank"
               style={{ color: "var(--accent-10)" }}
             >
@@ -124,11 +150,11 @@ export function SectionIntro() {
               </Flex>
             </Link>
 
-            <Text color="gray">•</Text>
+            <IntroDot />
 
             <Link
               href="https://github.com/tresabhi"
-              size="4"
+              size={{ initial: "3", sm: "4" }}
               target="_blank"
               style={{ color: "var(--accent-10)" }}
             >
@@ -139,41 +165,46 @@ export function SectionIntro() {
             </Link>
           </Flex>
 
-          <Flex gap="4">
+          <Flex
+            gap={{ initial: "5", xs: "4" }}
+            wrap="wrap"
+            gapY="0"
+            justify="center"
+          >
             <Link
               href="#journey"
-              size="4"
+              size={{ initial: "3", sm: "4" }}
               style={{ color: "var(--accent-10)" }}
             >
               Journey
             </Link>
 
-            <Text color="gray">•</Text>
+            <IntroDot />
 
             <Link
               href="#education"
-              size="4"
+              size={{ initial: "3", sm: "4" }}
               style={{ color: "var(--accent-10)" }}
             >
               Education
             </Link>
 
-            <Text color="gray">•</Text>
+            <IntroDot />
 
             <Link
               href="#projects"
-              size="4"
+              size={{ initial: "3", sm: "4" }}
               style={{ color: "var(--accent-10)" }}
             >
               Projects
             </Link>
 
-            <Text color="gray">•</Text>
+            <IntroDot />
 
             <Link
               href="/resume.pdf"
               target="_blank"
-              size="4"
+              size={{ initial: "3", sm: "4" }}
               style={{ color: "var(--accent-10)" }}
             >
               Résumé

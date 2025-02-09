@@ -1,9 +1,6 @@
 import { Flex } from "@radix-ui/themes";
 import { BaseTheme } from "../components/BaseTheme";
-import { SectionEducation } from "../components/SectionEducation";
 import { SectionIntro } from "../components/SectionIntro";
-import { SectionJourney } from "../components/SectionJourney";
-import { SectionProjects } from "../components/SectionProjects";
 
 export function Page() {
   return (
@@ -12,7 +9,7 @@ export function Page() {
         justify="center"
         minHeight="100vh"
         style={{ background: "var(--gray-1)" }}
-        py="9"
+        py={{ initial: "0", lg: "9" }}
       >
         <Flex
           direction="column"
@@ -23,9 +20,9 @@ export function Page() {
           }}
         >
           <SectionIntro />
-          <SectionJourney />
-          <SectionEducation />
-          <SectionProjects />
+          {/* <SectionJourney /> */}
+          {/* <SectionEducation /> */}
+          {/* <SectionProjects /> */}
         </Flex>
       </Flex>
     </BaseTheme>

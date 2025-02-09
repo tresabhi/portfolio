@@ -1,12 +1,12 @@
-import { Flex, type ThemeProps } from "@radix-ui/themes";
+import { Flex, type FlexProps, type ThemeProps } from "@radix-ui/themes";
 import { BaseTheme } from "./BaseTheme";
 
-interface SectionProps extends ThemeProps {}
+type SectionProps = FlexProps & Pick<ThemeProps, "appearance"> & {};
 
-export function Section({ children, ...props }: SectionProps) {
+export function Section({ children, appearance, ...props }: SectionProps) {
   return (
-    <BaseTheme {...props}>
-      <Flex direction="column" py="9" gap="9" px="9">
+    <BaseTheme appearance={appearance}>
+      <Flex direction="column" p={{ initial: "7", md: "9" }} gap="9" {...props}>
         {children}
       </Flex>
     </BaseTheme>
