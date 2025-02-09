@@ -9,7 +9,7 @@ export function Section({ children, appearance, ...props }: SectionProps) {
       <Flex
         direction="column"
         p={{ initial: "7", md: "9" }}
-        px={{ initial: "4", xs: "7", md: "9" }}
+        px={{ initial: "5", xs: "7", md: "9" }}
         gap={{ initial: "7", md: "9" }}
         {...props}
       >
