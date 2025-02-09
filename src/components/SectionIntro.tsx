@@ -18,7 +18,6 @@ export function SectionIntro() {
         position: "relative",
         overflow: "clip",
       }}
-      minHeight={{ initial: "calc(100vh - 4rem)", md: "auto" }}
     >
       <Engine />
 
