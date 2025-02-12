@@ -9,6 +9,9 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  PUBLIC_GOOGLE_TAG_MANAGER_ID: ${{ secrets.PUBLIC_GOOGLE_TAG_MANAGER_ID }}
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
