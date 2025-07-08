@@ -66,7 +66,7 @@ function FogManager() {
 
 const outlineMaterial = new LineBasicMaterial({
   color: 0x424242,
-  linewidth: 190,
+  linewidth: 1,
 });
 
 function Model() {
