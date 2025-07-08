@@ -1,5 +1,18 @@
-import { Theme, type ThemeProps } from "@radix-ui/themes";
+import { Box, Theme, type BoxProps, type ThemeProps } from "@radix-ui/themes";
 
-export function BaseTheme(props: ThemeProps) {
-  return <Theme accentColor="red" radius="full" {...props} />;
+export function BaseTheme({
+  style,
+  appearance,
+  ...props
+}: BoxProps & { appearance?: ThemeProps["appearance"] }) {
+  return (
+    <Theme
+      accentColor="red"
+      radius="full"
+      style={{ display: "contents" }}
+      appearance={appearance}
+    >
+      <Box style={{ background: "var(--gray-1)", ...style }} {...props} />
+    </Theme>
+  );
 }

@@ -1,8 +1,35 @@
 ---
+import { Flex } from "@radix-ui/themes";
+import { BaseTheme } from "../components/BaseTheme";
+import { SectionEducation } from "../components/SectionEducation";
+import { SectionIntro } from "../components/SectionIntro";
+import { SectionJourney } from "../components/SectionJourney";
+import { SectionProjects } from "../components/SectionProjects";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Page } from "./_index";
 ---
 
 <BaseLayout>
-  <Page client:load />
+  <BaseTheme>
+    <Flex
+      justify="center"
+      minHeight="100vh"
+      style={{ background: "var(--gray-1)" }}
+      py={{ initial: "0", lg: "9" }}
+    >
+      <Flex
+        direction="column"
+        flexGrow="1"
+        maxWidth="80rem"
+        style={{
+          background: "var(--gray-3)",
+          boxShadow: "var(--shadow-3)",
+        }}
+      >
+        <SectionIntro client:load />
+        <SectionJourney />
+        <SectionEducation />
+        <SectionProjects />
+      </Flex>
+    </Flex>
+  </BaseTheme>
 </BaseLayout>

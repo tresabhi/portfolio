@@ -7,4 +7,5 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [react()],
   site: "https://abhi-deep.com",
+  devToolbar: { enabled: false },
 });
