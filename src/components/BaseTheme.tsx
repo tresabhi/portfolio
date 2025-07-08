@@ -12,7 +12,7 @@ export function BaseTheme({
       style={{ display: "contents" }}
       appearance={appearance}
     >
-      <Box style={{ background: "var(--gray-1)", ...style }} {...props} />
+      <Box style={{ background: "var(--mauve-3)", ...style }} {...props} />
     </Theme>
   );
 }

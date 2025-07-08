@@ -106,7 +106,7 @@ export function Project({
               width="100%"
               position="absolute"
               style={{
-                background: "linear-gradient(transparent, var(--gray-3) 80%)",
+                background: "linear-gradient(transparent, var(--mauve-3) 80%)",
               }}
               justify="center"
               align="center"

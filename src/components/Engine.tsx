@@ -21,7 +21,7 @@ const far0 = 4.125;
 const far1 = 10;
 
 export function Engine() {
-  const canvas = useRef<HTMLCanvasElement>(null);
+  const canvas = useRef<HTMLCanvasElement>(null!);
   const onScreen = useOnScreen(canvas);
 
   return (

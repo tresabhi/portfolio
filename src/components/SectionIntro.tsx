@@ -17,6 +17,7 @@ export function SectionIntro() {
       style={{
         position: "relative",
         overflow: "clip",
+        background: "var(--mauve-1)",
       }}
     >
       <Engine />
@@ -81,7 +82,7 @@ export function SectionIntro() {
               width="100%"
               height="100%"
               style={{
-                backgroundColor: "var(--gray-a3)",
+                backgroundColor: "var(--mauve-a3)",
                 filter: "invert(1)",
               }}
             />
