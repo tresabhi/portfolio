@@ -78,7 +78,7 @@ export function Project({
           <Flex gap="1" wrap="wrap">
             <BM mr="1">Skills used:</BM>{" "}
             {skills.map((skill) => (
-              <Badge size="2" color="gray">
+              <Badge key={skill} size="2" color="gray">
                 {skill}
               </Badge>
             ))}
@@ -178,8 +178,8 @@ export function Project({
                   setCycle(false);
                 }}
               >
-                {images.map((_, index) => (
-                  <SegmentedControl.Item value={`${index}`}>
+                {images.map((image, index) => (
+                  <SegmentedControl.Item key={image} value={`${index}`}>
                     {index + 1}
                   </SegmentedControl.Item>
                 ))}
