@@ -1,4 +1,5 @@
 import { Box, Flex } from "@radix-ui/themes";
+import { Painting } from "./Painting";
 import { PaintingLabel } from "./PaintingLabel";
 import { Section } from "./Section";
 
@@ -7,34 +8,30 @@ export function SectionPaintings() {
     <Section id="projects" gap="9">
       <Flex direction="column" gap="6">
         <Box position="relative" height="min(calc(100vw * 5 / 4 / 2), 32rem)">
-          <Box
+          <Painting
+            position="absolute"
+            bottom="0"
+            left="50%"
+            src="/paintings/ross-style-2-512h.jpg"
+            height="75%"
             style={{
-              position: "absolute",
-              bottom: 0,
-              left: "50%",
               transform: "translateX(calc(-12.5%))",
-              backgroundImage: "url(/paintings/ross-style-2-512.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
               aspectRatio: "4 / 5",
-              height: "75%",
-              borderRadius: "var(--radius-1)",
-              boxShadow: "var(--shadow-6)",
             }}
           />
-          <Box
+          <Painting
+            position="absolute"
+            top="0"
+            left="50%"
+            src="/paintings/ross-style-1-512h.jpg"
+            height="75%"
             style={{
-              position: "absolute",
-              top: 0,
-              left: "50%",
               transform: "translateX(calc(-100% + 12.5%))",
-              backgroundImage: "url(/paintings/ross-style-1-512.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
               aspectRatio: "4 / 5",
-              height: "75%",
-              borderRadius: "var(--radius-1)",
-              boxShadow: "var(--shadow-6)",
             }}
           />
         </Box>
@@ -47,17 +44,10 @@ export function SectionPaintings() {
       </Flex>
 
       <Flex direction="column" gap="6" align="center">
-        <Box
+        <Painting
           width="min(80vw, 32rem)"
-          style={{
-            aspectRatio: "16 / 9",
-            backgroundImage:
-              "url(https://stsci-opo.org/STScI-01GA6KNV1S3TP2JBPCDT8G826T.png)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            borderRadius: "var(--radius-1)",
-            boxShadow: "var(--shadow-6)",
-          }}
+          src="/paintings/carina-nebula-640w.jpg"
+          style={{ aspectRatio: "16 / 9" }}
         />
         <PaintingLabel
           name="Carina Nebula"

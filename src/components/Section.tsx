@@ -8,7 +8,7 @@ export function Section({ children, appearance, ...props }: SectionProps) {
     <BaseTheme appearance={appearance}>
       <Flex
         direction="column"
-        p={{ initial: "7", md: "9" }}
+        py={{ initial: "7", md: "9" }}
         px={{ initial: "5", xs: "7", md: "9" }}
         gap={{ initial: "7", md: "9" }}
         {...props}
