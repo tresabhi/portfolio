@@ -6,11 +6,12 @@ import {
 } from "@radix-ui/react-icons";
 import { Box, Flex, IconButton, Link, Popover, Text } from "@radix-ui/themes";
 import { imgur } from "../core/imgur";
+import type { MaybeSkeletonProps } from "../types/skeleton";
 import { Engine } from "./Engine";
 import { IntroDot } from "./IntroDot";
 import { Section } from "./Section";
 
-export function SectionIntro() {
+export function SectionIntro({ skeleton }: MaybeSkeletonProps) {
   return (
     <Section
       appearance="dark"
@@ -20,7 +21,7 @@ export function SectionIntro() {
         background: "var(--mauve-1)",
       }}
     >
-      <Engine />
+      {!skeleton && <Engine />}
 
       <Flex
         direction="column"

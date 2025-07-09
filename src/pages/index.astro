@@ -25,7 +25,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           boxShadow: "var(--shadow-3)",
         }}
       >
-        <SectionIntro client:load />
+        <SectionIntro client:only="react">
+          <SectionIntro skeleton slot="fallback" />
+        </SectionIntro>
         <SectionJourney />
         <SectionEducation />
         <SectionPaintings />

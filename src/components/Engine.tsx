@@ -13,6 +13,7 @@ import {
   type Group,
 } from "three";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
+import { clamp, lerp } from "three/src/math/MathUtils.js";
 import { useOnScreen } from "../hooks/useOnScreen";
 
 const near0 = 2;
@@ -23,6 +24,11 @@ const far1 = 10;
 export function Engine() {
   const canvas = useRef<HTMLCanvasElement>(null!);
   const onScreen = useOnScreen(canvas);
+  const t = clamp(window.innerWidth / window.innerHeight - 0.5, 0, 1);
+  const fov = lerp(50, 25, t);
+  const x = lerp(8, 5, t);
+  const y = lerp(0, 5, t);
+  const z = lerp(-0, -8, t);
 
   return (
     <Box position="absolute" width="100%" height="100%" top="0" left="0">
@@ -31,8 +37,8 @@ export function Engine() {
           ref={canvas}
           frameloop={onScreen ? "always" : "never"}
           camera={{
-            fov: 25,
-            position: new Vector3(5, 5, -8).multiplyScalar(0.7),
+            fov,
+            position: new Vector3(x, y, z).multiplyScalar(0.7),
           }}
           scene={{
             fog: new Fog(mauveDark.mauve1, near0, far0),
