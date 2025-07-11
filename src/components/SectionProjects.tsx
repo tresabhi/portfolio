@@ -11,7 +11,7 @@ export function SectionProjects() {
   return (
     <>
       <Section id="projects" gap="9">
-        <Heading size="8" align="center">
+        <Heading weight="medium" size="8" align="center">
           Key Projects
         </Heading>
 
@@ -211,7 +211,7 @@ export function SectionProjects() {
       </Section>
 
       <Section gap="9">
-        <Heading size="8" align="center">
+        <Heading weight="medium" size="8" align="center">
           Other Projects
         </Heading>
 

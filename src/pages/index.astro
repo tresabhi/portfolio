@@ -4,6 +4,7 @@ import { BaseTheme } from "../components/BaseTheme";
 import { SectionEducation } from "../components/SectionEducation";
 import { SectionIntro } from "../components/SectionIntro";
 import { SectionJourney } from "../components/SectionJourney";
+import { SectionOpenUAS } from "../components/SectionOpenUAS";
 import { SectionPaintings } from "../components/SectionPaintings";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
@@ -28,8 +29,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <SectionIntro client:only="react">
           <SectionIntro skeleton slot="fallback" />
         </SectionIntro>
+        <!-- <SectionHighlights /> -->
         <SectionJourney />
         <SectionEducation />
+        <SectionOpenUAS />
         <SectionPaintings />
         <!-- <SectionProjects /> -->
       </Flex>

@@ -65,7 +65,7 @@ export function Project({
           gap="3"
           justify={{ initial: "center", sm: "start" }}
         >
-          <Heading>{title}</Heading>
+          <Heading weight="medium">{title}</Heading>
 
           {type === ProjectType.Educational && (
             <Badge color="amber">Educational</Badge>

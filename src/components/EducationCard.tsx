@@ -25,7 +25,9 @@ export function EducationCard({
 
         <Flex direction="column" gap="1">
           <Flex align="center" gap="2">
-            <Heading size="5">{name}</Heading>
+            <Heading weight="medium" size="5">
+              {name}
+            </Heading>
             <Text trim="end" color="gray">
               {time}
             </Text>

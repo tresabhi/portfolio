@@ -23,10 +23,6 @@ export function SectionEducation() {
 
   return (
     <Section id="education" appearance="dark">
-      <Flex justify="center">
-        <Heading size="8">Education</Heading>
-      </Flex>
-
       <Flex
         justify="between"
         gap={{ initial: "9", md: "6" }}
@@ -50,7 +46,11 @@ export function SectionEducation() {
             gap="3"
             direction={{ initial: "column-reverse", md: "row" }}
           >
-            <Heading color="red" style={{ color: "var(--accent-10)" }}>
+            <Heading
+              weight="medium"
+              color="red"
+              style={{ color: "var(--accent-10)" }}
+            >
               Aerospace Engineering
             </Heading>
             <Badge color="gray">2023 - 2027</Badge>
@@ -107,7 +107,9 @@ export function SectionEducation() {
             gap="3"
             direction={{ initial: "column-reverse", md: "row" }}
           >
-            <Heading color="jade">Cyber Physical Systems</Heading>
+            <Heading weight="medium" color="jade">
+              Cyber Physical Systems
+            </Heading>
             <Badge color="gray">2025 - 2027</Badge>
           </Flex>
 
@@ -169,7 +171,12 @@ export function SectionEducation() {
             gap="2"
             align={{ initial: "center", xs: "start" }}
           >
-            <Heading size="5" color="red" style={{ color: "var(--accent-10)" }}>
+            <Heading
+              weight="medium"
+              size="5"
+              color="red"
+              style={{ color: "var(--accent-10)" }}
+            >
               Why Aerospace?
             </Heading>
 
@@ -200,7 +207,7 @@ export function SectionEducation() {
             gap="2"
             align={{ initial: "center", xs: "start" }}
           >
-            <Heading size="5" color="jade">
+            <Heading weight="medium" size="5" color="jade">
               Why C-P Systems?
             </Heading>
 

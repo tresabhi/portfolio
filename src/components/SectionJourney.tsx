@@ -5,8 +5,8 @@ import { Section } from "./Section";
 
 export function SectionJourney() {
   return (
-    <Section id="journey">
-      <Heading size="8" align="center">
+    <Section id="journey" gap="8">
+      <Heading weight="medium" size="8" align="center">
         My Journey
       </Heading>
 

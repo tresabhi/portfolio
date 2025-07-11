@@ -1,4 +1,4 @@
-import { Badge, Em, Flex, Text } from "@radix-ui/themes";
+import { Badge, Flex, Text } from "@radix-ui/themes";
 
 interface PaintingLabelProps {
   name: string;
@@ -10,9 +10,7 @@ export function PaintingLabel({ name, year, description }: PaintingLabelProps) {
   return (
     <Flex align="center" direction="column">
       <Flex align="center" gap="2">
-        <Text size="4">
-          <Em>{name}</Em>
-        </Text>
+        <Text size="4">{name}</Text>
         <Badge color="gray" size="1">
           {year}
         </Badge>
