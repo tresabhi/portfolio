@@ -5,7 +5,7 @@ import { Section } from "./Section";
 
 export function SectionPaintings() {
   return (
-    <Section id="projects" gap="9">
+    <Section id="paintings" gap="9">
       <Flex direction="column" gap="6">
         <Box position="relative" height="min(calc(100vw * 5 / 4 / 2), 32rem)">
           <Painting

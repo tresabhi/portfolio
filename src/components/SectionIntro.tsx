@@ -183,16 +183,6 @@ export function SectionIntro({ skeleton }: MaybeSkeletonProps) {
             <IntroDot />
 
             <Link
-              href="#education"
-              size={{ initial: "3", sm: "4" }}
-              style={{ color: "var(--accent-10)" }}
-            >
-              Education
-            </Link>
-
-            <IntroDot />
-
-            <Link
               href="#projects"
               size={{ initial: "3", sm: "4" }}
               style={{ color: "var(--accent-10)" }}
