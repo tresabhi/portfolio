@@ -6,6 +6,7 @@ interface ProjectProps {
   image: string;
   shadowX?: string;
   shadowY?: string;
+  shadowIntensity?: number;
   title: string;
   skills: string[];
   children: React.ReactNode;
@@ -17,6 +18,7 @@ interface ProjectProps {
 export function Project({
   image,
   reverse,
+  shadowIntensity = 6,
   shadowX = reverse ? "var(--space-1)" : "calc(var(--space-1) * -1)",
   shadowY = "var(--space-1)",
   title,
@@ -52,7 +54,7 @@ export function Project({
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            filter: `drop-shadow(${shadowX} ${shadowY} 0.25rem var(--black-a6))`,
+            filter: `drop-shadow(${shadowX} ${shadowY} 0.25rem var(--black-a${shadowIntensity}))`,
           }}
         />
       </Flex>

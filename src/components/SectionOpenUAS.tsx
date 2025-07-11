@@ -6,7 +6,7 @@ export function SectionOpenUAS() {
   return (
     <Project
       title="OpenUAS"
-      skills={["Git", "FPGA", "Ansys", "SOLIDWORKS", "C++", "Python"]}
+      skills={["Git", "FPGA", "Ansys", "SolidWorks", "C++", "Python"]}
       image="/images/open-uas-drone-640w.png"
       imageWidth="20rem"
     >

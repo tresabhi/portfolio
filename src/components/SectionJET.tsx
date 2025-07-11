@@ -9,7 +9,15 @@ export function SectionJET() {
     <Project
       title="J.E.T."
       image="/images/jet-engine-960h.png"
-      skills={[""]}
+      skills={[
+        "Advanced Thermodynamics",
+        "SolidWorks",
+        "Computer Fluid Dynamics",
+        "Python",
+      ]}
+      shadowX="0"
+      shadowY="var(--space-2)"
+      shadowIntensity={4}
       reverse
       sticky
       imageWidth="8rem"
