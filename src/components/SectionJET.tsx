@@ -9,6 +9,7 @@ export function SectionJET() {
     <Project
       title="J.E.T."
       image="/images/jet-engine-960h.png"
+      imageSmall="/images/jet-engine-horizontal-640w.png"
       skills={[
         "Advanced Thermodynamics",
         "SolidWorks",
