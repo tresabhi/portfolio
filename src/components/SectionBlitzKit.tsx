@@ -9,6 +9,7 @@ export function SectionBlitzKit() {
       skills={["Large Public Project", "GitHub", "TypeScript", "C#", "WebGL"]}
       image="/images/blitzkit-tank-640w.png"
       imageWidth="20rem"
+      reverse
     >
       <Text>
         BlitzKit is a passion project of mine that documents the armor profiles,

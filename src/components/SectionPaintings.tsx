@@ -1,4 +1,4 @@
-import { Box, Flex } from "@radix-ui/themes";
+import { Box, Em, Flex, Text } from "@radix-ui/themes";
 import { Painting } from "./Painting";
 import { PaintingLabel } from "./PaintingLabel";
 import { Section } from "./Section";
@@ -6,6 +6,10 @@ import { Section } from "./Section";
 export function SectionPaintings() {
   return (
     <Section id="paintings" gap="9">
+      <Text align="center">
+        <Em>And I dabble with a bit of painting...</Em>
+      </Text>
+
       <Flex direction="column" gap="6">
         <Box position="relative" height="min(calc(100vw * 5 / 4 / 2), 32rem)">
           <Painting

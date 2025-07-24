@@ -6,8 +6,10 @@ import { SectionEducation } from "../components/SectionEducation";
 import { SectionIntro } from "../components/SectionIntro";
 import { SectionJET } from "../components/SectionJET";
 import { SectionJourney } from "../components/SectionJourney";
+import { SectionNerdyBirds } from "../components/SectionNerdyBirds";
 import { SectionOpenUAS } from "../components/SectionOpenUAS";
 import { SectionPaintings } from "../components/SectionPaintings";
+import { SubtleSeparator } from "../components/SubtleSeparator";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -16,7 +18,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <Flex
       justify="center"
       minHeight="100vh"
-      style={{ background: "var(--mauve-1)" }}
+      style={{ background: "var(--gray-1)" }}
       py={{ initial: "0", lg: "9" }}
     >
       <Flex
@@ -24,7 +26,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         flexGrow="1"
         maxWidth="80rem"
         style={{
-          background: "var(--mauve-3)",
+          background: "var(--gray-3)",
           boxShadow: "var(--shadow-3)",
         }}
       >
@@ -36,7 +38,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <SectionEducation />
         <SectionOpenUAS />
         <SectionJET />
+        <SectionNerdyBirds />
         <SectionBlitzKit />
+
+        <SubtleSeparator />
+
         <SectionPaintings />
         <!-- <SectionProjects /> -->
       </Flex>

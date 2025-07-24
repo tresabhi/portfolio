@@ -18,7 +18,7 @@ export function SectionIntro({ skeleton }: MaybeSkeletonProps) {
       style={{
         position: "relative",
         overflow: "clip",
-        background: "var(--mauve-1)",
+        background: "var(--gray-1)",
       }}
     >
       {!skeleton && <Engine />}
@@ -83,7 +83,7 @@ export function SectionIntro({ skeleton }: MaybeSkeletonProps) {
               width="100%"
               height="100%"
               style={{
-                backgroundColor: "var(--mauve-a3)",
+                backgroundColor: "var(--gray-a3)",
                 filter: "invert(1)",
               }}
             />

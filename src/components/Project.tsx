@@ -48,7 +48,7 @@ export function Project({
           src={image}
           style={{
             position: sticky ? "sticky" : undefined,
-            top: "var(--space-4)",
+            top: "var(--space-5)",
             flexShrink: 0,
             width: imageWidth,
             backgroundSize: "contain",
