@@ -1,17 +1,7 @@
-import {
-  Badge,
-  Box,
-  Flex,
-  Heading,
-  Link,
-  Separator,
-  Text,
-} from "@radix-ui/themes";
+import { Badge, Box, Flex, Heading, Link, Text } from "@radix-ui/themes";
 import { wiki } from "../core/wiki";
 import { PerseveranceDoodle } from "./Doodles/Perseverance";
-import { RocketDoodle } from "./Doodles/Rocket";
 import { SpaceShuttleDoodle } from "./Doodles/SpaceShuttle";
-import { TowerDoodle, TowerDoodleNoSignal } from "./Doodles/Tower";
 import { Section } from "./Section";
 
 const BIRTH = new Date(2005, 3, 7);
@@ -38,7 +28,7 @@ export function SectionEducation() {
           width="fit-content"
         >
           <Text color="red" style={{ color: "var(--accent-10)" }}>
-            <RocketDoodle width="10rem" height="10rem" />
+            <SpaceShuttleDoodle width="10rem" height="10rem" />
           </Text>
 
           <Flex
@@ -94,12 +84,7 @@ export function SectionEducation() {
           width="fit-content"
         >
           <Text color="jade">
-            <Box display={{ initial: "none", md: "block" }}>
-              <TowerDoodle width="10rem" height="10rem" />
-            </Box>
-            <Box display={{ initial: "block", md: "none" }}>
-              <TowerDoodleNoSignal width="10rem" height="10rem" />
-            </Box>
+            <PerseveranceDoodle width="10rem" height="10rem" />
           </Text>
 
           <Flex
@@ -147,78 +132,6 @@ export function SectionEducation() {
               </Link>
             </Text>
           </Box>
-        </Flex>
-      </Flex>
-
-      <Flex justify="center" px="8">
-        <Separator size="4" />
-      </Flex>
-
-      <Flex direction="column" gap="9">
-        <Flex
-          gap={{ initial: "4", xs: "5", md: "8" }}
-          align="center"
-          justify="center"
-          py="2"
-          direction={{ initial: "column", xs: "row" }}
-        >
-          <Text color="red" style={{ color: "var(--accent-10)" }}>
-            <SpaceShuttleDoodle width="8rem" height="8rem" />
-          </Text>
-
-          <Flex
-            direction="column"
-            gap="2"
-            align={{ initial: "center", xs: "start" }}
-          >
-            <Heading
-              weight="medium"
-              size="5"
-              color="red"
-              style={{ color: "var(--accent-10)" }}
-            >
-              Why Aerospace?
-            </Heading>
-
-            <Text style={{ maxWidth: "40rem" }} wrap="pretty">
-              STS-135 (the last Space Shuttle) sparked my fascination with
-              flying machines at seven years old. Today, at {age}, I'm still
-              amazed by its complexity. This technological marvel is
-              unquestionably something I wanted to be a part of. This enduring
-              passion for rockets and airplanes led me to pursue Aerospace
-              Engineering.
-            </Text>
-          </Flex>
-        </Flex>
-
-        <Flex
-          gap={{ initial: "4", xs: "5", md: "8" }}
-          align="center"
-          justify="center"
-          py="2"
-          direction={{ initial: "column", xs: "row" }}
-        >
-          <Text color="jade">
-            <PerseveranceDoodle width="8rem" height="8rem" />
-          </Text>
-
-          <Flex
-            direction="column"
-            gap="2"
-            align={{ initial: "center", xs: "start" }}
-          >
-            <Heading weight="medium" size="5" color="jade">
-              Why C-P Systems?
-            </Heading>
-
-            <Text style={{ maxWidth: "40rem" }} wrap="pretty">
-              I love creating robots, simulations, and websites like this one!
-              The ability to transform abstractions into functional, visual
-              realities within seconds is fascinating. It feels natural to
-              combine my skills with computers to breathe life into complex
-              physical systems through seamless integration and design.
-            </Text>
-          </Flex>
         </Flex>
       </Flex>
     </Section>
