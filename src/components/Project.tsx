@@ -72,11 +72,11 @@ export function Project({
         <Box
           display={{ initial: "none", md: "block" }}
           position={sticky ? "sticky" : "static"}
+          top="5"
         >
           <img
             src={image}
             style={{
-              top: "var(--space-5)",
               flexShrink: 0,
               width: imageWidth,
               backgroundSize: "contain",
