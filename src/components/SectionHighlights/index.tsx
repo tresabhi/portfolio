@@ -4,7 +4,7 @@ import "./index.css";
 
 export function SectionHighlights() {
   return (
-    <Box position="relative" height="4rem">
+    <Box position="relative" height={{ initial: "3rem", xs: "4rem" }}>
       <Flex
         position="absolute"
         left="calc(var(--space-1) * -1)"
@@ -14,8 +14,8 @@ export function SectionHighlights() {
         align="center"
         justify="center"
         id="banner"
-        py="4"
-        gap="5"
+        py={{ initial: "3", xs: "4" }}
+        gap={{ initial: "6", xs: "8", sm: "9" }}
       >
         <Link
           highContrast
@@ -28,17 +28,17 @@ export function SectionHighlights() {
           highContrast
           style={{ display: "contents", color: "var(--white-a12)" }}
         >
-          <img src="/logos/first-256w.png" style={{ height: "100%" }} />
+          <img
+            src="/logos/temporal-logic-white-256w.png"
+            style={{ height: "100%" }}
+          />
         </Link>
 
         <Link
           highContrast
           style={{ display: "contents", color: "var(--white-a12)" }}
         >
-          <img
-            src="/logos/temporal-logic-256w.png"
-            style={{ height: "100%" }}
-          />
+          <img src="/logos/first-256w.png" style={{ height: "100%" }} />
         </Link>
       </Flex>
     </Box>

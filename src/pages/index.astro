@@ -3,6 +3,7 @@ import { Flex } from "@radix-ui/themes";
 import { BaseTheme } from "../components/BaseTheme";
 import { SectionBlitzKit } from "../components/SectionBlitzKit";
 import { SectionEducation } from "../components/SectionEducation";
+import { SectionHighlights } from "../components/SectionHighlights";
 import { SectionIntro } from "../components/SectionIntro";
 import { SectionJET } from "../components/SectionJET";
 import { SectionJourney } from "../components/SectionJourney";
@@ -33,7 +34,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <SectionIntro client:only="react">
           <SectionIntro skeleton slot="fallback" />
         </SectionIntro>
-        <!-- <SectionHighlights /> -->
+        <SectionHighlights />
         <SectionJourney />
         <SectionEducation />
         <SectionOpenUAS />
@@ -44,7 +45,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <SubtleSeparator />
 
         <SectionPaintings />
-        <!-- <SectionProjects /> -->
       </Flex>
     </Flex>
   </BaseTheme>

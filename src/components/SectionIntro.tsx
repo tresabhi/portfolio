@@ -39,29 +39,55 @@ export function SectionIntro({ skeleton }: MaybeSkeletonProps) {
           align={{ initial: "center", md: "start" }}
         >
           <Flex flexGrow="1" flexBasis="0" maxWidth="38rem">
-            <Text
-              size={{ initial: "3", xs: "5" }}
-              wrap="pretty"
-              style={{
-                lineHeight: "1.8",
-              }}
-            >
-              Hi, I'm <Text weight="bold">Abhi</Text>—an{" "}
+            <Box display={{ initial: "none", md: "block" }}>
               <Text
-                weight="bold"
-                color="red"
-                style={{ color: "var(--accent-10)" }}
+                size="5"
+                wrap="pretty"
+                style={{
+                  lineHeight: "1.8",
+                }}
               >
-                Aerospace Engineer
-              </Text>{" "}
-              driven by an insatiable curiosity and a passion for turning
-              ambitious ideas into reality. From designing and manufacturing jet
-              engines and pioneering in autonomous robotics to building software
-              that bridges the gap between the digital and physical worlds, I am
-              fueled by a love for <i>exploration</i> and <i>self-learning</i>.
-              With every project, I strive to push boundaries and inspire
-              innovation in aerospace and beyond.
-            </Text>
+                Hi, I'm <Text weight="bold">Abhi</Text>, an{" "}
+                <Text
+                  weight="bold"
+                  color="red"
+                  style={{ color: "var(--accent-10)" }}
+                >
+                  Aerospace Engineer
+                </Text>{" "}
+                driven by an insatiable curiosity and a passion for turning
+                ambitious ideas into reality. From designing and manufacturing
+                jet engines and pioneering in autonomous robotics to building
+                software that bridges the gap between the digital and physical
+                worlds, I am fueled by a love for <i>exploration</i> and{" "}
+                <i>self-learning</i>. With every project, I strive to push
+                boundaries and inspire innovation in aerospace and beyond.
+              </Text>
+            </Box>
+
+            <Box display={{ initial: "block", md: "none" }}>
+              <Text
+                size={{ initial: "3", xs: "4" }}
+                wrap="pretty"
+                style={{ lineHeight: "1" }}
+              >
+                Hi, I'm <Text weight="bold">Abhi</Text>—an{" "}
+                <Text
+                  weight="bold"
+                  color="red"
+                  style={{ color: "var(--accent-10)" }}
+                >
+                  Aerospace Engineer
+                </Text>{" "}
+                driven by an insatiable curiosity and a passion for turning
+                ambitious ideas into reality. From designing and manufacturing
+                jet engines and pioneering in autonomous robotics to building
+                software that bridges the gap between the digital and physical
+                worlds, I am fueled by a love for <i>exploration</i> and{" "}
+                <i>self-learning</i>. With every project, I strive to push
+                boundaries and inspire innovation in aerospace and beyond.
+              </Text>
+            </Box>
           </Flex>
 
           <Box
