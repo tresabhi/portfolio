@@ -7,10 +7,10 @@ export function SectionHighlights() {
     <Box position="relative" height={{ initial: "3rem", xs: "4rem" }}>
       <Flex
         position="absolute"
-        left="calc(var(--space-1) * -1)"
+        left={{ initial: "0", lg: "calc(var(--space-1) * -1)" }}
         top="0"
         height="100%"
-        width="calc(100% + 2 * var(--space-1))"
+        width={{ initial: "100%", lg: "calc(100% + 2 * var(--space-1))" }}
         align="center"
         justify="center"
         id="banner"
@@ -34,12 +34,12 @@ export function SectionHighlights() {
           />
         </Link>
 
-        <Link
+        {/* <Link
           highContrast
           style={{ display: "contents", color: "var(--white-a12)" }}
         >
           <img src="/logos/first-256w.png" style={{ height: "100%" }} />
-        </Link>
+        </Link> */}
       </Flex>
     </Box>
   );
