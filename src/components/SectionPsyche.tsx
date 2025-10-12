@@ -15,9 +15,9 @@ export function SectionPsyche() {
         explain, and highlight the innovation, scientific, and engineering
         content of NASA's Psyche mission to the asteroid of the same name,
         believed to be the metallic core of a planetesimal that never formed. I
-        am firmly a part of the Psyche team, with the opportunity to interact
-        with Psyche scientists and engineers from NASA, ASU, and other partner
-        institutions, and with other Psyche Inspired interns and staff.
+        am firmly part of the Psyche team, with the opportunity to interact with
+        Psyche scientists and engineers from NASA, ASU, and other partner
+        institutions, as well as with other Psyche-inspired interns and staff.
       </Text>
     </Project>
   );
