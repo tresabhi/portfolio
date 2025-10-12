@@ -20,6 +20,7 @@ export function SectionHighlights() {
         <Link
           highContrast
           style={{ display: "contents", color: "var(--white-a12)" }}
+          href="#project-nasa-psyche-intern"
         >
           <NasaWorm width="5.5rem" />
         </Link>
@@ -27,6 +28,7 @@ export function SectionHighlights() {
         <Link
           highContrast
           style={{ display: "contents", color: "var(--white-a12)" }}
+          href="#project-openuas"
         >
           <img
             src="/logos/temporal-logic-white-256w.png"

@@ -9,6 +9,7 @@ export function SectionOpenUAS() {
       skills={["Git", "FPGA", "Ansys", "SolidWorks", "C++", "Python"]}
       image="/images/open-uas-drone-640w.png"
       imageWidth="20rem"
+      time="Aug 2025 - Present"
     >
       <Text wrap="pretty">
         I designed and built a low-cost, open-source , fixed-wing UAS (~4 ft

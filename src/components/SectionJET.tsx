@@ -19,9 +19,9 @@ export function SectionJET() {
       shadowX="0"
       shadowY="var(--space-2)"
       shadowIntensity={4}
-      reverse
       sticky
       imageWidth="8rem"
+      time="Aug 2024 - Present"
     >
       <Text>
         I <BM>designed</BM> and <BM>manufactured</BM> the heart of our jet

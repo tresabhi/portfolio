@@ -1,4 +1,5 @@
-import { Box, Flex, Heading } from "@radix-ui/themes";
+import { Box, Flex, Heading, Text } from "@radix-ui/themes";
+import { sluggify } from "../core/sluggify";
 import { Section } from "./Section";
 import { Skills } from "./Skills";
 
@@ -9,11 +10,12 @@ interface ProjectProps {
   shadowY?: string;
   shadowIntensity?: number;
   title: string;
-  skills: string[];
+  skills?: string[];
   children: React.ReactNode;
   imageWidth: string;
   reverse?: boolean;
   sticky?: boolean;
+  time: string;
 }
 
 export function Project({
@@ -28,9 +30,10 @@ export function Project({
   children,
   imageWidth,
   sticky,
+  time,
 }: ProjectProps) {
   return (
-    <Section align="center">
+    <Section align="center" id={`project-${sluggify(title)}`}>
       <Flex
         justify="center"
         gap="6rem"
@@ -42,9 +45,14 @@ export function Project({
         align={sticky ? "start" : "center"}
       >
         <Flex flexGrow="1" direction="column" gap="4">
-          <Heading weight="medium">{title}</Heading>
+          <Flex align="center" gap="4">
+            <Heading weight="medium">{title}</Heading>
+            <Text color="gray" size="2">
+              {time}
+            </Text>
+          </Flex>
 
-          <Skills skills={skills} />
+          {skills && <Skills skills={skills} />}
 
           <Flex
             justify="center"

@@ -11,6 +11,7 @@ export function SectionNerdyBirds() {
       imageWidth="20rem"
       shadowIntensity={5}
       sticky
+      time="Aug 2019 - May 2023"
     >
       <Text>
         I served as the <BM>team lead</BM> during the 2022-2023 season, taking
