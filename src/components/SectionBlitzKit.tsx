@@ -9,7 +9,6 @@ export function SectionBlitzKit() {
       skills={["Large Public Project", "GitHub", "TypeScript", "C#", "WebGL"]}
       image="/images/blitzkit-tank-640w.png"
       imageWidth="20rem"
-      reverse
       time="Apr 2022 - Present"
     >
       <Text>
