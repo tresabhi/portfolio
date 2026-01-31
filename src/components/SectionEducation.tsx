@@ -3,9 +3,9 @@ import { wiki } from "../core/wiki";
 import { PerseveranceDoodle } from "./Doodles/Perseverance";
 import { SpaceShuttleDoodle } from "./Doodles/SpaceShuttle";
 import { Section } from "./Section";
+import { GPA } from "../core/constants";
 
 const BIRTH = new Date(2005, 3, 7);
-const GPA = 3.83;
 
 export function SectionEducation() {
   const timeElapsed = Date.now() - BIRTH.getTime();
