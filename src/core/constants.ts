@@ -1,1 +1,1 @@
-export const GPA = 3.83;
+export const GPA = 3.86;
